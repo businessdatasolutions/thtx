@@ -493,8 +493,8 @@ Je hebt HR. Maar heb je ook AIR?
 Elk bedrijf heeft Human Resources om mensen te managen.
 Maar wie managet jouw AI Resources?
 
-We bouwen organisaties die hun transformatie bezitten.
-Niet huren.
+We bouwen organisaties die hun transformatie zelf vormgeven.
+Niet uitbesteden.
 
 Hoe?
 Door interne AI-capaciteit te bouwen die blijft en groeit.
@@ -655,7 +655,7 @@ uw strategische partner voor duurzame groei.
 **✅ Better Version:**
 
 ```
-We geloven dat je je transformatie moet bezitten, niet huren.
+We geloven dat je je transformatie zelf moet vormgeven, niet uitbesteden.
 
 Daarom bouwen we capaciteiten die groeien.
 Geen presentaties. Werkende oplossingen. In 45 dagen.

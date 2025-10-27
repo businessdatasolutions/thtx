@@ -225,7 +225,7 @@ export default function ThinkTenXLanding() {
 
           <div className="space-y-8 text-lg leading-relaxed">
             <p className="text-xl font-semibold text-center mb-8">
-              We bouwen organisaties die hun transformatie bezitten.<br />
+              We bouwen organisaties die hun transformatie zelf vormgeven.<br />
               Door begrip, samenwerking en capaciteiten die groeien.
             </p>
 
