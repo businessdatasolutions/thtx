@@ -40,7 +40,7 @@ npm run dev
 **Build for production**
 ```bash
 npm run build
-# Creates optimized bundle in dist/
+# Creates optimized bundle in docs/
 ```
 
 **Preview production build**
@@ -49,15 +49,11 @@ npm run preview
 # Opens at http://localhost:4173/thtx/
 ```
 
-**Deploy to GitHub Pages**
-```bash
-npm run deploy
-# Builds and deploys to gh-pages branch
-```
-
 ## Deployment
 
-- Deployed via GitHub Pages from the `gh-pages` branch
+- Deployed via GitHub Pages from the `/docs` folder on the `main` branch
+- Run `npm run build` to build the site to the `/docs` folder
+- Commit and push the `/docs` folder to deploy
 - Base URL configured as `/thtx/` in [vite.config.js](vite.config.js)
 - Site URL: https://businessdatasolutions.github.io/thtx/
 - `.nojekyll` file in public/ prevents Jekyll processing
