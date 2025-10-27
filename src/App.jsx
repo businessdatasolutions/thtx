@@ -79,11 +79,7 @@ export default function ThinkTenXLanding() {
               niet 10%
             </h1>
 
-            <p className="text-2xl sm:text-3xl font-bold text-gray-900 max-w-3xl mx-auto leading-relaxed pt-4">
-              Je hebt HR. Maar heb je ook AIR?
-            </p>
-
-            <p className="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed pt-8">
               We bouwen capaciteiten die groeien — radicale businessmodel-innovatie door collaboratieve AI-oplossingen.<br />
               <strong>Zoek je incrementele verbetering? Dan zijn wij niet de juiste fit.</strong>
             </p>
