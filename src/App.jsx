@@ -117,7 +117,7 @@ export default function ThinkTenXLanding() {
 
               <div className="bg-gray-800 p-6 rounded-xl">
                 <h3 className="text-xl font-bold mb-2" style={{ color: '#d4db3e' }}>Wat we bouwen</h3>
-                <p className="text-gray-300">Interne AI Resources die de IT-business kloof overbruggen en transformatie-eigenaarschap creëren. Capaciteiten die groeien, niet verkruimelen.</p>
+                <p className="text-gray-300">Interne AI Resources die de IT-business kloof overbruggen en transformatie-eigenaarschap creëren. Capaciteiten die blijven en sterker worden.</p>
               </div>
 
               <div className="bg-gray-800 p-6 rounded-xl">
