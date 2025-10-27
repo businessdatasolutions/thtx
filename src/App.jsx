@@ -493,8 +493,7 @@ export default function ThinkTenXLanding() {
               </div>
               <p className="text-gray-400">
                 De Solutions Architect Beweging<br />
-                Think Ten X<br />
-                <span className="text-sm italic">of Ten Hove Tech Excellence 😉</span>
+                Think Ten X
               </p>
             </div>
             
