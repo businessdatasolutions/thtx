@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Zap, Users, Target, CheckCircle, XCircle, Menu, X } from 'lucide-react';
+import { ArrowRight, Users, Target, CheckCircle, XCircle, Menu, X } from 'lucide-react';
 
 export default function ThinkTenXLanding() {
   const [scrolled, setScrolled] = useState(false);
@@ -30,7 +30,7 @@ export default function ThinkTenXLanding() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center space-x-2">
-              <Zap className="w-8 h-8" style={{ color: '#d4db3e' }} />
+              <img src="/thtx/logo.png" alt="THTX Logo" className="w-8 h-8" />
               <span className="text-2xl font-bold">THTX</span>
               <span className="text-sm text-gray-500 hidden sm:inline">.nl</span>
             </div>
@@ -488,7 +488,7 @@ export default function ThinkTenXLanding() {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <Zap className="w-6 h-6" style={{ color: '#d4db3e' }} />
+                <img src="/thtx/logo.png" alt="THTX Logo" className="w-6 h-6" />
                 <span className="text-xl font-bold">THTX.nl</span>
               </div>
               <p className="text-gray-400">
