@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Users, Target, CheckCircle, XCircle, Menu, X } from 'lucide-react';
+import { ArrowRight, Users, Target, CheckCircle, XCircle, Menu, X, FileText, MessageSquare, Package, TrendingUp, AlertCircle, Lightbulb, Zap } from 'lucide-react';
 
 export default function ThinkTenXLanding() {
   const [scrolled, setScrolled] = useState(false);
@@ -36,11 +36,11 @@ export default function ThinkTenXLanding() {
             </div>
             
             <div className="hidden md:flex space-x-8 items-center">
+              <a href="#example" className="text-gray-700 hover:text-gray-900 transition">Voorbeeld</a>
               <a href="#manifesto" className="text-gray-700 hover:text-gray-900 transition">Manifesto</a>
-              <a href="#how-it-works" className="text-gray-700 hover:text-gray-900 transition">Hoe het werkt</a>
               <a href="#tracks" className="text-gray-700 hover:text-gray-900 transition">Programma's</a>
               <a href="#contact" className="px-6 py-2 rounded-lg font-semibold transition" style={{ backgroundColor: '#d4db3e' }}>
-                Start hier
+                Reserveer plek
               </a>
             </div>
 
@@ -54,11 +54,11 @@ export default function ThinkTenXLanding() {
         {mobileMenuOpen && (
           <div className="md:hidden bg-white border-t">
             <div className="px-4 py-4 space-y-3">
+              <a href="#example" className="block text-gray-700 hover:text-gray-900">Voorbeeld</a>
               <a href="#manifesto" className="block text-gray-700 hover:text-gray-900">Manifesto</a>
-              <a href="#how-it-works" className="block text-gray-700 hover:text-gray-900">Hoe het werkt</a>
               <a href="#tracks" className="block text-gray-700 hover:text-gray-900">Programma's</a>
               <a href="#contact" className="block px-6 py-2 rounded-lg text-center font-semibold" style={{ backgroundColor: '#d4db3e' }}>
-                Start hier
+                Reserveer plek
               </a>
             </div>
           </div>
@@ -69,27 +69,170 @@ export default function ThinkTenXLanding() {
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center space-y-8">
-            <div className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4" style={{ backgroundColor: '#def0fa' }}>
-              De Solutions Architect Beweging
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold mb-4" style={{ backgroundColor: '#def0fa' }}>
+              <Zap className="w-4 h-4" style={{ color: '#d4db3e' }} />
+              De Solutions Architect Beweging · Lancering Februari 2026
             </div>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
-              Voor visionairs die<br />
-              <span style={{ color: '#d4db3e' }}>10X denken</span>,<br />
-              niet 10%
+              Van 2 uur zoeken naar<br />
+              <span style={{ color: '#d4db3e' }}>3 minuten vinden</span>
             </h1>
 
             <p className="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed pt-8">
-              We bouwen capaciteiten die groeien — radicale businessmodel-innovatie door collaboratieve AI-oplossingen.<br />
-              <strong>Zoek je incrementele verbetering? Dan zijn wij niet de juiste fit.</strong>
+              In <strong style={{ color: '#d4db3e' }}>90 dagen</strong> bouw je{' '}
+              <strong style={{ color: '#d4db3e' }}>werkende AI-oplossingen</strong><br />
+              die je IT-team goedkeurt en je business transformeert.
+            </p>
+
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+              Voor professionals die niet optimaliseren, maar transformeren.<br />
+              Die niet <strong>10%</strong> beter denken, maar <strong style={{ color: '#d4db3e' }}>10X</strong> anders.
             </p>
 
             <div className="pt-8">
-              <a href="#quiz" className="inline-flex items-center px-8 py-4 rounded-lg text-lg font-semibold transition transform hover:scale-105" style={{ backgroundColor: '#d4db3e' }}>
-                Ben je klaar voor transformatie?
+              <a href="#example" className="inline-flex items-center px-8 py-4 rounded-lg text-lg font-semibold transition transform hover:scale-105" style={{ backgroundColor: '#d4db3e' }}>
+                Zie een concreet voorbeeld
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
             </div>
+
+            <div className="pt-8 text-sm text-gray-600">
+              <div className="flex items-center justify-center gap-6 flex-wrap">
+                <div><strong style={{ color: '#d4db3e' }}>€11.250/maand</strong> productivity savings</div>
+                <div>·</div>
+                <div><strong style={{ color: '#d4db3e' }}>90%+</strong> tijd besparing</div>
+                <div>·</div>
+                <div><strong style={{ color: '#d4db3e' }}>150x</strong> ROI</div>
+              </div>
+              <div className="text-xs mt-2">Van een experiment voor MPAC Group</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* MPAC Case Study Section */}
+      <section id="example" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4" style={{ backgroundColor: '#def0fa' }}>
+              Voorbeeld: Wat mogelijk is in 90 dagen
+            </div>
+            <h2 className="text-4xl font-bold mb-4">
+              Van probleem naar werkende oplossing
+            </h2>
+            <p className="text-xl text-gray-600">
+              Een experiment voor MPAC Group (packaging machinery)
+            </p>
+          </div>
+
+          {/* Three-column layout: Problem → Solution → Impact */}
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {/* Problem */}
+            <div className="bg-red-50 p-6 rounded-xl border-2 border-red-200">
+              <div className="text-red-600 font-semibold mb-2 flex items-center gap-2">
+                <AlertCircle className="w-5 h-5" />
+                Het Probleem
+              </div>
+              <h3 className="text-xl font-bold mb-4">2 uur zoeken in PDFs</h3>
+              <ul className="space-y-2 text-sm text-gray-700">
+                <li>• Sales teams verliezen 30-120 min per dag</li>
+                <li>• Technische specificaties verspreid</li>
+                <li>• Alleen seniors vinden snel info</li>
+                <li>• Klanten wachten op antwoorden</li>
+              </ul>
+              <div className="mt-4 pt-4 border-t border-red-200">
+                <div className="font-semibold text-red-700">
+                  €11.250/maand verloren tijd
+                </div>
+              </div>
+            </div>
+
+            {/* Solution */}
+            <div className="bg-blue-50 p-6 rounded-xl border-2 border-blue-200">
+              <div className="text-blue-600 font-semibold mb-2 flex items-center gap-2">
+                <Lightbulb className="w-5 h-5" />
+                De Oplossing
+              </div>
+              <h3 className="text-xl font-bold mb-4">AI Document Search</h3>
+              <ul className="space-y-2 text-sm text-gray-700">
+                <li>• Elasticsearch (BM25) voor snelheid</li>
+                <li>• Claude Haiku voor samenvatting</li>
+                <li>• Vision AI voor tekst extractie</li>
+                <li>• User feedback voor ranking</li>
+              </ul>
+              <div className="mt-4 pt-4 border-t border-blue-200">
+                <div className="font-semibold text-blue-700">
+                  115/115 tests passing
+                </div>
+              </div>
+            </div>
+
+            {/* Impact */}
+            <div className="p-6 rounded-xl border-2" style={{ backgroundColor: '#def0fa', borderColor: '#d4db3e' }}>
+              <div className="font-semibold mb-2 flex items-center gap-2" style={{ color: '#d4db3e' }}>
+                <TrendingUp className="w-5 h-5" />
+                De Impact
+              </div>
+              <h3 className="text-xl font-bold mb-4">3 minuten vinden</h3>
+              <ul className="space-y-2 text-sm text-gray-700">
+                <li>• <strong>90%+</strong> tijd besparing</li>
+                <li>• <strong>50ms</strong> response tijd (p95 &lt;100ms)</li>
+                <li>• <strong>€75/maand</strong> operationele kosten</li>
+                <li>• <strong>150x ROI</strong> in eerste maand</li>
+              </ul>
+              <div className="mt-4 pt-4 border-t" style={{ borderColor: '#d4db3e' }}>
+                <div className="font-semibold" style={{ color: '#d4db3e' }}>
+                  5 agents × 2.25 uur/dag terug
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Timeline: How it was built */}
+          <div className="bg-gray-50 p-6 rounded-xl mb-8">
+            <h4 className="font-semibold mb-4 text-center">Van Idee naar Werkend Systeem</h4>
+            <div className="flex items-center justify-between max-w-3xl mx-auto">
+              <div className="text-center flex-1">
+                <div className="w-12 h-12 rounded-full mx-auto mb-2 flex items-center justify-center text-white font-bold"
+                     style={{ backgroundColor: '#d4db3e' }}>1</div>
+                <div className="text-sm font-semibold">Probleem</div>
+                <div className="text-xs text-gray-600">Week 1-2</div>
+              </div>
+              <ArrowRight className="w-6 h-6 text-gray-400" />
+              <div className="text-center flex-1">
+                <div className="w-12 h-12 rounded-full mx-auto mb-2 flex items-center justify-center text-white font-bold"
+                     style={{ backgroundColor: '#d4db3e' }}>2</div>
+                <div className="text-sm font-semibold">Prototype</div>
+                <div className="text-xs text-gray-600">Week 3-8</div>
+              </div>
+              <ArrowRight className="w-6 h-6 text-gray-400" />
+              <div className="text-center flex-1">
+                <div className="w-12 h-12 rounded-full mx-auto mb-2 flex items-center justify-center text-white font-bold"
+                     style={{ backgroundColor: '#d4db3e' }}>3</div>
+                <div className="text-sm font-semibold">Tests</div>
+                <div className="text-xs text-gray-600">Week 9-10</div>
+              </div>
+              <ArrowRight className="w-6 h-6 text-gray-400" />
+              <div className="text-center flex-1">
+                <div className="w-12 h-12 rounded-full mx-auto mb-2 flex items-center justify-center text-white font-bold"
+                     style={{ backgroundColor: '#d4db3e' }}>4</div>
+                <div className="text-sm font-semibold">Deploy</div>
+                <div className="text-xs text-gray-600">Week 11-12</div>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="text-center">
+            <p className="text-gray-600 mb-6">
+              Dit is <strong>één voorbeeld</strong> van wat mogelijk is.<br />
+              Wat zou <strong>jouw</strong> team kunnen bouwen?
+            </p>
+            <a href="#possibilities" className="inline-flex items-center px-8 py-4 rounded-lg text-lg font-semibold transition" style={{ backgroundColor: '#d4db3e' }}>
+              Zie meer mogelijkheden
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </a>
           </div>
         </div>
       </section>
@@ -125,6 +268,107 @@ export default function ThinkTenXLanding() {
                 <p className="text-gray-300">Samen. Cross-industrieel. 2 junior professionals gratis per workshop. Want bewegingen worden gebouwd door mensen die een kans krijgen.</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What You Can Build Section */}
+      <section id="possibilities" className="py-20 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#def0fa' }}>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">
+              Wat je kan bouwen in 90 dagen
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Cross-industry voorbeelden van AI-oplossingen die IT goedkeurt<br />
+              en business transformeert
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Card 1: MPAC (real example) */}
+            <div className="bg-white p-6 rounded-xl shadow-lg border-2" style={{ borderColor: '#d4db3e' }}>
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center text-white"
+                     style={{ backgroundColor: '#d4db3e' }}>
+                  <FileText className="w-5 h-5" />
+                </div>
+                <div className="text-xs font-semibold px-2 py-1 rounded"
+                     style={{ backgroundColor: '#def0fa', color: '#d4db3e' }}>
+                  ✓ GEBOUWD
+                </div>
+              </div>
+              <h3 className="text-xl font-bold mb-2">Document Search AI</h3>
+              <p className="text-sm text-gray-600 mb-3">
+                Manufacturing · Packaging machinery
+              </p>
+              <div className="text-lg font-semibold mb-4" style={{ color: '#d4db3e' }}>
+                90%+ tijd besparing
+              </div>
+              <p className="text-sm text-gray-700 mb-4">
+                Van 2 uur zoeken in technische PDFs naar 3 minuten vinden
+                met AI samenvatting en intelligent search.
+              </p>
+              <div className="text-xs text-gray-500 pt-3 border-t">
+                Experiment voor MPAC Group<br />
+                12 weken · €11.250/maand impact
+              </div>
+            </div>
+
+            {/* Card 2: Potential use case */}
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center text-white mb-3"
+                   style={{ backgroundColor: '#d4db3e' }}>
+                <MessageSquare className="w-5 h-5" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">Customer Query Classifier</h3>
+              <p className="text-sm text-gray-600 mb-3">
+                Retail · E-commerce
+              </p>
+              <div className="text-lg font-semibold mb-4" style={{ color: '#d4db3e' }}>
+                40% snellere response
+              </div>
+              <p className="text-sm text-gray-700 mb-4">
+                Automatische categorisatie van klantvragen naar juiste team,
+                met urgentie detectie en smart routing.
+              </p>
+              <div className="text-xs text-gray-500 pt-3 border-t">
+                Potentieel: 15-20 uur/week besparing
+              </div>
+            </div>
+
+            {/* Card 3: Potential use case */}
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center text-white mb-3"
+                   style={{ backgroundColor: '#d4db3e' }}>
+                <Package className="w-5 h-5" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">Supply Chain Forecast AI</h3>
+              <p className="text-sm text-gray-600 mb-3">
+                Logistics · Distribution
+              </p>
+              <div className="text-lg font-semibold mb-4" style={{ color: '#d4db3e' }}>
+                25% betere accuracy
+              </div>
+              <p className="text-sm text-gray-700 mb-4">
+                Planning assistent die leert van historische data,
+                seizoenpatronen, en externe factoren.
+              </p>
+              <div className="text-xs text-gray-500 pt-3 border-t">
+                Potentieel: €50K+ inventory savings
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-sm text-gray-600 mb-6">
+              Deze voorbeelden tonen de <strong>diversiteit</strong> van wat mogelijk is.<br />
+              In workshops werk je aan <strong>jouw</strong> specifieke uitdaging.
+            </p>
+            <a href="#quiz" className="inline-flex items-center px-8 py-4 rounded-lg text-lg font-semibold transition" style={{ backgroundColor: '#d4db3e' }}>
+              Ben je klaar om te bouwen?
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </a>
           </div>
         </div>
       </section>
@@ -321,11 +565,26 @@ export default function ThinkTenXLanding() {
             {/* Track 1 */}
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2" style={{ borderColor: '#d4db3e' }}>
               <div className="p-8" style={{ backgroundColor: '#def0fa' }}>
-                <Users className="w-12 h-12 mb-4" />
+                <div className="flex items-center justify-between mb-4">
+                  <Users className="w-12 h-12" />
+                  <div className="px-3 py-1 rounded-full text-sm font-semibold text-white"
+                       style={{ backgroundColor: '#d4db3e' }}>
+                    Early-bird: -50%
+                  </div>
+                </div>
                 <h3 className="text-3xl font-bold mb-2">Track 1</h3>
                 <p className="text-xl font-semibold mb-4">Professionele ontwikkelingsworkshops</p>
-                <div className="text-4xl font-bold">€2.500</div>
-                <div className="text-gray-600">per persoon</div>
+                <div className="flex items-baseline gap-2">
+                  <div className="text-4xl font-bold" style={{ color: '#d4db3e' }}>€1.250</div>
+                  <div className="text-lg text-gray-400 line-through">€2.500</div>
+                </div>
+                <div className="text-gray-600 mb-2">per persoon · early-bird</div>
+                <div className="text-sm font-semibold" style={{ color: '#d4db3e' }}>
+                  Eerste workshop: Februari 2026
+                </div>
+                <div className="text-xs text-gray-600">
+                  6 professionals + 2 junior (gratis)
+                </div>
               </div>
               
               <div className="p-8 space-y-4">
@@ -357,19 +616,42 @@ export default function ThinkTenXLanding() {
                 </ul>
 
                 <a href="#contact" className="block w-full text-center px-6 py-3 rounded-lg font-semibold mt-8 transition hover:opacity-90" style={{ backgroundColor: '#d4db3e' }}>
-                  Sluit aan bij volgende workshop
+                  Reserveer early-bird plek
                 </a>
+
+                <div className="mt-6 pt-6 border-t text-center">
+                  <p className="text-sm font-semibold mb-2">Launch Garantie</p>
+                  <p className="text-xs text-gray-600">
+                    Niet tevreden na dag 1? Volledige refund.<br />
+                    Geen werkende oplossing in 90 dagen? Volgende workshop gratis.
+                  </p>
+                </div>
               </div>
             </div>
 
             {/* Track 2 */}
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2" style={{ borderColor: '#d4db3e' }}>
               <div className="p-8" style={{ backgroundColor: '#dcebf3' }}>
-                <Target className="w-12 h-12 mb-4" />
+                <div className="flex items-center justify-between mb-4">
+                  <Target className="w-12 h-12" />
+                  <div className="px-3 py-1 rounded-full text-sm font-semibold text-white"
+                       style={{ backgroundColor: '#d4db3e' }}>
+                    Early-bird: -50%
+                  </div>
+                </div>
                 <h3 className="text-3xl font-bold mb-2">Track 2</h3>
                 <p className="text-xl font-semibold mb-4">Organisatietransformatie</p>
-                <div className="text-4xl font-bold">€25.000</div>
-                <div className="text-gray-600">per organisatie</div>
+                <div className="flex items-baseline gap-2">
+                  <div className="text-4xl font-bold" style={{ color: '#d4db3e' }}>€12.500</div>
+                  <div className="text-lg text-gray-400 line-through">€25.000</div>
+                </div>
+                <div className="text-gray-600 mb-2">per organisatie · early-bird</div>
+                <div className="text-sm font-semibold" style={{ color: '#d4db3e' }}>
+                  Start: Maart 2026
+                </div>
+                <div className="text-xs text-gray-600">
+                  8-12 participants per cohort
+                </div>
               </div>
               
               <div className="p-8 space-y-4">
@@ -401,8 +683,16 @@ export default function ThinkTenXLanding() {
                 </ul>
 
                 <a href="#contact" className="block w-full text-center px-6 py-3 rounded-lg font-semibold mt-8 transition hover:opacity-90" style={{ backgroundColor: '#d4db3e' }}>
-                  Start kwalificatie
+                  Start kwalificatiegesprek
                 </a>
+
+                <div className="mt-6 pt-6 border-t text-center">
+                  <p className="text-sm font-semibold mb-2">Launch Garantie</p>
+                  <p className="text-xs text-gray-600">
+                    Niet tevreden na dag 1? Volledige refund.<br />
+                    Geen werkende oplossing in 90 dagen? Volgende programma gratis.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -414,31 +704,97 @@ export default function ThinkTenXLanding() {
         </div>
       </section>
 
-      {/* Who We Serve */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#def0fa' }}>
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12">Dit is voor jou als...</h2>
+      {/* Is This For You? */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#dcebf3' }}>
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-4">Is dit voor jou?</h2>
+          <p className="text-center text-gray-600 mb-12">
+            Eerlijke vraag. Dit is niet voor iedereen.
+          </p>
 
-          <div className="space-y-6">
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <h3 className="text-xl font-bold mb-2">Je klaar bent om 10X te bouwen</h3>
-              <p className="text-gray-700">De "5% beter" oplossingen zijn niet genoeg. Je wilt iets fundamenteel beters creëren.</p>
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            {/* Voor Jou */}
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                <span style={{ color: '#d4db3e' }}>✓</span>
+                Dit is voor jou als je denkt:
+              </h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <ArrowRight className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: '#d4db3e' }} />
+                  <span>"We kunnen dit fundamenteel anders doen"</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <ArrowRight className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: '#d4db3e' }} />
+                  <span>"Ik wil iets <strong>bouwen</strong>, niet alleen analyseren"</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <ArrowRight className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: '#d4db3e' }} />
+                  <span>"<strong>10X</strong> beter is mogelijk, niet alleen 10%"</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <ArrowRight className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: '#d4db3e' }} />
+                  <span>"Ik wil leren van andere industrieën"</span>
+                </li>
+              </ul>
+
+              <div className="mt-6 pt-6 border-t">
+                <p className="text-sm text-gray-600">
+                  <strong>Herken je jezelf in het MPAC voorbeeld?</strong><br />
+                  "Die 2 uur zoeken was gewoon normaal... tot we het anders deden."
+                </p>
+              </div>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <h3 className="text-xl font-bold mb-2">Je klaar bent om fundamentele aannames te bevragen</h3>
-              <p className="text-gray-700">Niet bang om "zo doen we dat altijd al" uit te dagen en opnieuw te bedenken vanuit eerste principes.</p>
-            </div>
+            {/* Niet Voor Jou */}
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-2xl font-bold mb-6">
+                → Dit is (nog) niet voor jou als je:
+              </h3>
+              <ul className="space-y-4 mb-6">
+                <li className="flex items-start gap-3">
+                  <span className="text-gray-400">•</span>
+                  <span>Zoekt naar incrementele procesoptimalisatie</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-gray-400">•</span>
+                  <span>Je huidige aanpak 5-10% wilt verbeteren</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-gray-400">•</span>
+                  <span>Nog niet klaar bent voor fundamentele verandering</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-gray-400">•</span>
+                  <span>Liever eerst resultaten van anderen ziet (februari 2026)</span>
+                </li>
+              </ul>
 
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <h3 className="text-xl font-bold mb-2">Je wilt leren van diverse industrieën</h3>
-              <p className="text-gray-700">Je weet dat de beste innovaties komen van kruisbestuiving, niet van gesilo'd denken.</p>
+              <div className="pt-6 border-t">
+                <p className="font-semibold mb-2">En dat is prima.</p>
+                <p className="text-sm text-gray-600 mb-4">
+                  Voor incrementele verbetering raden we aan:<br />
+                  → Traditionele proces consultancy<br />
+                  → Efficiency-gerichte trainingen<br />
+                  → Standaard AI workshops
+                </p>
+                <p className="text-sm text-gray-700">
+                  Wanneer je klaar bent om te herdenken wat mogelijk is,<br />
+                  zijn we hier. Ook in 2027.
+                </p>
+              </div>
             </div>
+          </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <h3 className="text-xl font-bold mb-2">Je resultaten belangrijker vindt dan certificaten</h3>
-              <p className="text-gray-700">Je geeft om geïmplementeerde oplossingen en echte impact, niet om diploma's aan de muur.</p>
-            </div>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="#tracks" className="px-8 py-4 rounded-lg font-semibold text-center transition transform hover:scale-105"
+               style={{ backgroundColor: '#d4db3e' }}>
+              Ja, ik ben klaar →
+            </a>
+            <a href="#contact" className="px-8 py-4 rounded-lg font-semibold text-center bg-white border-2 hover:bg-gray-50"
+               style={{ borderColor: '#d4db3e' }}>
+              Nog niet zeker - blijf me updaten
+            </a>
           </div>
         </div>
       </section>
@@ -447,11 +803,11 @@ export default function ThinkTenXLanding() {
       <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl sm:text-5xl font-bold mb-8">
-            Klaar om 10X te denken?
+            Klaar om te bouwen wat jij voor ogen hebt?
           </h2>
 
           <p className="text-xl text-gray-600 mb-12">
-            Sluit je aan bij de beweging van visionairs die de oplossingen van morgen bouwen met de tools van vandaag.
+            Word één van de eersten. Sluit je aan bij de lancering in februari 2026.
           </p>
 
           <div className="space-y-6">
@@ -469,9 +825,12 @@ export default function ThinkTenXLanding() {
           </div>
 
           <div className="mt-16 p-8 rounded-xl" style={{ backgroundColor: '#dcebf3' }}>
-            <p className="text-lg text-gray-700">
-              <strong>Eerlijke disclaimer:</strong> We hebben een streng kwalificatieproces.<br />
-              Zoek je optimalisatie? Dan verwijzen we je respectvol door naar partners die beter passen.<br />
+            <p className="text-lg text-gray-700 mb-4">
+              <strong>Early-bird voordelen:</strong><br />
+              50% korting · Extra co-creatie tijd · Lifetime alumni status
+            </p>
+            <p className="text-sm text-gray-600">
+              Eerste 2 workshops krijgen speciale pioneer pricing.<br />
               Zoek je transformatie? Laten we praten.
             </p>
           </div>
