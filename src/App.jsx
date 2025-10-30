@@ -132,7 +132,7 @@ export default function ThinkTenXLanding() {
           {/* Three-column layout: Problem → Solution → Impact */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {/* Problem */}
-            <div className="bg-white p-6 rounded-xl border-2 border-red-300">
+            <div className="bg-gray-50 p-6 rounded-xl border-2 border-red-300">
               <div className="text-red-600 font-semibold mb-2 flex items-center gap-2">
                 <AlertCircle className="w-5 h-5" />
                 Het Probleem
@@ -152,7 +152,7 @@ export default function ThinkTenXLanding() {
             </div>
 
             {/* Solution */}
-            <div className="bg-white p-6 rounded-xl border-2 border-blue-300">
+            <div className="bg-gray-50 p-6 rounded-xl border-2 border-blue-300">
               <div className="text-blue-600 font-semibold mb-2 flex items-center gap-2">
                 <Lightbulb className="w-5 h-5" />
                 De Oplossing
@@ -172,7 +172,7 @@ export default function ThinkTenXLanding() {
             </div>
 
             {/* Impact */}
-            <div className="bg-white p-6 rounded-xl border-2" style={{ borderColor: '#d4db3e' }}>
+            <div className="bg-gray-50 p-6 rounded-xl border-2" style={{ borderColor: '#d4db3e' }}>
               <div className="font-semibold mb-2 flex items-center gap-2" style={{ color: '#d4db3e' }}>
                 <TrendingUp className="w-5 h-5" />
                 De Impact
