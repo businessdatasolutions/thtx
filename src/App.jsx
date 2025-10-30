@@ -447,7 +447,7 @@ export default function ThinkTenXLanding() {
             <CheckCircle className="w-16 h-16 mx-auto mb-6" style={{ color: '#d4db3e' }} />
             <h2 className="text-4xl font-bold mb-6">Welkom. Jij bent precies wie we zoeken.</h2>
             <p className="text-xl text-gray-700 mb-8">
-              Je bent niet geïnteresseerd in kapotte processen 5% efficiënter maken.<br />
+              Je bent niet geïnteresseerd in verouderde processen 5% efficiënter maken.<br />
               Je wilt iets fundamenteel beters bouwen.
             </p>
             <a
