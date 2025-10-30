@@ -75,37 +75,40 @@ export default function ThinkTenXLanding() {
             </div>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
-              Van 2 uur zoeken naar<br />
-              <span style={{ color: '#d4db3e' }}>3 minuten vinden</span>
+              Voor visionairs die<br />
+              <span style={{ color: '#d4db3e' }}>10X denken</span>,<br />
+              niet 10%
             </h1>
 
             <p className="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed pt-8">
-              In <strong style={{ color: '#d4db3e' }}>90 dagen</strong> bouw je{' '}
-              <strong style={{ color: '#d4db3e' }}>werkende AI-oplossingen</strong><br />
-              die je IT-team goedkeurt en je business transformeert.
+              Bouw <strong style={{ color: '#d4db3e' }}>interne AI-capaciteit</strong> die blijft en groeit.<br />
+              Transformeer hoe je organisatie waarde creëert met AI Solutions Architecture.
             </p>
 
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              Voor professionals die niet optimaliseren, maar transformeren.<br />
-              Die niet <strong>10%</strong> beter denken, maar <strong style={{ color: '#d4db3e' }}>10X</strong> anders.
+              In <strong style={{ color: '#d4db3e' }}>90 dagen</strong>: van idee naar werkende oplossing.<br />
+              Cross-industrieel. Collaboratief. Capaciteiten die zich vermenigvuldigen.
             </p>
 
-            <div className="pt-8">
-              <a href="#example" className="inline-flex items-center px-8 py-4 rounded-lg text-lg font-semibold transition transform hover:scale-105" style={{ backgroundColor: '#d4db3e' }}>
-                Zie een concreet voorbeeld
+            <div className="pt-8 flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="#example" className="inline-flex items-center justify-center px-8 py-4 rounded-lg text-lg font-semibold transition transform hover:scale-105" style={{ backgroundColor: '#d4db3e' }}>
+                Zie wat mogelijk is
                 <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
+              <a href="#manifesto" className="inline-flex items-center justify-center px-8 py-4 rounded-lg text-lg font-semibold transition border-2 bg-white hover:bg-gray-50" style={{ borderColor: '#d4db3e' }}>
+                Lees het manifesto
               </a>
             </div>
 
             <div className="pt-8 text-sm text-gray-600">
+              <div className="font-semibold mb-2">Een beweging, geen consultancy</div>
               <div className="flex items-center justify-center gap-6 flex-wrap">
-                <div><strong style={{ color: '#d4db3e' }}>€11.250/maand</strong> productivity savings</div>
+                <div>26% naar junior talent</div>
                 <div>·</div>
-                <div><strong style={{ color: '#d4db3e' }}>90%+</strong> tijd besparing</div>
+                <div>40-50% afwijzing voor alignment</div>
                 <div>·</div>
-                <div><strong style={{ color: '#d4db3e' }}>150x</strong> ROI</div>
+                <div>Cross-industry samenwerking</div>
               </div>
-              <div className="text-xs mt-2">Van een experiment voor MPAC Group</div>
             </div>
           </div>
         </div>
@@ -116,13 +119,13 @@ export default function ThinkTenXLanding() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4" style={{ backgroundColor: '#def0fa' }}>
-              Voorbeeld: Wat mogelijk is in 90 dagen
+              De Solutions Architect Aanpak
             </div>
             <h2 className="text-4xl font-bold mb-4">
-              Van probleem naar werkende oplossing
+              Van probleem naar werkende oplossing in 90 dagen
             </h2>
             <p className="text-xl text-gray-600">
-              Een experiment voor MPAC Group (packaging machinery)
+              Een voorbeeld: Document search AI voor MPAC Group
             </p>
           </div>
 
@@ -225,12 +228,15 @@ export default function ThinkTenXLanding() {
 
           {/* CTA */}
           <div className="text-center">
-            <p className="text-gray-600 mb-6">
-              Dit is <strong>één voorbeeld</strong> van wat mogelijk is.<br />
-              Wat zou <strong>jouw</strong> team kunnen bouwen?
+            <p className="text-gray-600 mb-4">
+              Dit is hoe <strong>Solutions Architects</strong> werken:<br />
+              Niet consultants die opleveringen, maar professionals die capaciteit bouwen.
+            </p>
+            <p className="text-sm text-gray-500 mb-6">
+              Wat zou <strong>jouw</strong> organisatie kunnen bouwen met deze aanpak?
             </p>
             <a href="#possibilities" className="inline-flex items-center px-8 py-4 rounded-lg text-lg font-semibold transition" style={{ backgroundColor: '#d4db3e' }}>
-              Zie meer mogelijkheden
+              Ontdek meer mogelijkheden
               <ArrowRight className="ml-2 w-5 h-5" />
             </a>
           </div>
