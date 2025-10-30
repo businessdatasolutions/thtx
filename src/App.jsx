@@ -132,7 +132,7 @@ export default function ThinkTenXLanding() {
           {/* Three-column layout: Problem → Solution → Impact */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {/* Problem */}
-            <div className="bg-red-50 p-6 rounded-xl border-2 border-red-200">
+            <div className="bg-white p-6 rounded-xl border-2 border-red-300">
               <div className="text-red-600 font-semibold mb-2 flex items-center gap-2">
                 <AlertCircle className="w-5 h-5" />
                 Het Probleem
@@ -144,15 +144,15 @@ export default function ThinkTenXLanding() {
                 <li>• Alleen seniors vinden snel info</li>
                 <li>• Klanten wachten op antwoorden</li>
               </ul>
-              <div className="mt-4 pt-4 border-t border-red-200">
-                <div className="font-semibold text-red-700">
+              <div className="mt-4 pt-4 border-t border-red-300">
+                <div className="font-semibold text-red-600">
                   €11.250/maand verloren tijd
                 </div>
               </div>
             </div>
 
             {/* Solution */}
-            <div className="bg-blue-50 p-6 rounded-xl border-2 border-blue-200">
+            <div className="bg-white p-6 rounded-xl border-2 border-blue-300">
               <div className="text-blue-600 font-semibold mb-2 flex items-center gap-2">
                 <Lightbulb className="w-5 h-5" />
                 De Oplossing
@@ -164,16 +164,16 @@ export default function ThinkTenXLanding() {
                 <li>• Vision AI voor tekst extractie</li>
                 <li>• User feedback voor ranking</li>
               </ul>
-              <div className="mt-4 pt-4 border-t border-blue-200">
-                <div className="font-semibold text-blue-700">
+              <div className="mt-4 pt-4 border-t border-blue-300">
+                <div className="font-semibold text-blue-600">
                   115/115 tests passing
                 </div>
               </div>
             </div>
 
             {/* Impact */}
-            <div className="bg-yellow-50 p-6 rounded-xl border-2 border-yellow-400">
-              <div className="text-yellow-600 font-semibold mb-2 flex items-center gap-2">
+            <div className="bg-white p-6 rounded-xl border-2" style={{ borderColor: '#d4db3e' }}>
+              <div className="font-semibold mb-2 flex items-center gap-2" style={{ color: '#d4db3e' }}>
                 <TrendingUp className="w-5 h-5" />
                 De Impact
               </div>
@@ -184,8 +184,8 @@ export default function ThinkTenXLanding() {
                 <li>• <strong>€75/maand</strong> operationele kosten</li>
                 <li>• <strong>150x ROI</strong> in eerste maand</li>
               </ul>
-              <div className="mt-4 pt-4 border-t border-yellow-400">
-                <div className="font-semibold text-yellow-700">
+              <div className="mt-4 pt-4 border-t" style={{ borderColor: '#d4db3e' }}>
+                <div className="font-semibold" style={{ color: '#d4db3e' }}>
                   5 agents × 2.25 uur/dag terug
                 </div>
               </div>
