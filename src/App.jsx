@@ -172,8 +172,8 @@ export default function ThinkTenXLanding() {
             </div>
 
             {/* Impact */}
-            <div className="p-6 rounded-xl border-2" style={{ backgroundColor: '#def0fa', borderColor: '#d4db3e' }}>
-              <div className="font-semibold mb-2 flex items-center gap-2" style={{ color: '#d4db3e' }}>
+            <div className="bg-yellow-50 p-6 rounded-xl border-2 border-yellow-400">
+              <div className="text-yellow-600 font-semibold mb-2 flex items-center gap-2">
                 <TrendingUp className="w-5 h-5" />
                 De Impact
               </div>
@@ -184,8 +184,8 @@ export default function ThinkTenXLanding() {
                 <li>• <strong>€75/maand</strong> operationele kosten</li>
                 <li>• <strong>150x ROI</strong> in eerste maand</li>
               </ul>
-              <div className="mt-4 pt-4 border-t" style={{ borderColor: '#d4db3e' }}>
-                <div className="font-semibold" style={{ color: '#d4db3e' }}>
+              <div className="mt-4 pt-4 border-t border-yellow-400">
+                <div className="font-semibold text-yellow-700">
                   5 agents × 2.25 uur/dag terug
                 </div>
               </div>
