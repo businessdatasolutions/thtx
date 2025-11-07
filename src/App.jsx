@@ -132,8 +132,8 @@ export default function ThinkTenXLanding() {
           {/* Three-column layout: Problem → Solution → Impact */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {/* Problem */}
-            <div className="bg-gray-50 p-6 rounded-xl border-2" style={{ borderColor: '#ff6984' }}>
-              <div className="text-red-600 font-semibold mb-2 flex items-center gap-2">
+            <div className="p-6 rounded-xl border-2" style={{ borderColor: '#ff6984', backgroundColor: '#fff5f7' }}>
+              <div className="font-semibold mb-2 flex items-center gap-2" style={{ color: '#ff6984' }}>
                 <AlertCircle className="w-5 h-5" />
                 Het Probleem
               </div>
@@ -145,15 +145,15 @@ export default function ThinkTenXLanding() {
                 <li>• Klanten wachten op antwoorden</li>
               </ul>
               <div className="mt-4 pt-4 border-t" style={{ borderColor: '#ff6984' }}>
-                <div className="font-semibold text-red-600">
+                <div className="font-semibold" style={{ color: '#ff6984' }}>
                   €11.250/maand verloren tijd
                 </div>
               </div>
             </div>
 
             {/* Solution */}
-            <div className="bg-gray-50 p-6 rounded-xl border-2" style={{ borderColor: '#00d1ff' }}>
-              <div className="text-blue-600 font-semibold mb-2 flex items-center gap-2">
+            <div className="p-6 rounded-xl border-2" style={{ borderColor: '#00d1ff', backgroundColor: '#f0fbff' }}>
+              <div className="font-semibold mb-2 flex items-center gap-2" style={{ color: '#00d1ff' }}>
                 <Lightbulb className="w-5 h-5" />
                 De Oplossing
               </div>
@@ -165,14 +165,14 @@ export default function ThinkTenXLanding() {
                 <li>• User feedback voor ranking</li>
               </ul>
               <div className="mt-4 pt-4 border-t" style={{ borderColor: '#00d1ff' }}>
-                <div className="font-semibold text-blue-600">
+                <div className="font-semibold" style={{ color: '#00d1ff' }}>
                   115/115 tests passing
                 </div>
               </div>
             </div>
 
             {/* Impact */}
-            <div className="bg-gray-50 p-6 rounded-xl border-2" style={{ borderColor: '#d4db3e' }}>
+            <div className="p-6 rounded-xl border-2" style={{ borderColor: '#d4db3e', backgroundColor: '#fafbf0' }}>
               <div className="font-semibold mb-2 flex items-center gap-2" style={{ color: '#d4db3e' }}>
                 <TrendingUp className="w-5 h-5" />
                 De Impact
@@ -395,8 +395,9 @@ export default function ThinkTenXLanding() {
               <button
                 onClick={() => handleQuizAnswer('10percent')}
                 className={`p-6 rounded-xl border-2 transition ${
-                  selectedAnswer === '10percent' ? 'border-red-500 bg-red-50' : 'border-gray-200 hover:border-gray-400'
+                  selectedAnswer === '10percent' ? '' : 'border-gray-200 hover:border-gray-400'
                 }`}
+                style={selectedAnswer === '10percent' ? { borderColor: '#ff6984', backgroundColor: '#fff5f7' } : {}}
               >
                 <h3 className="text-xl font-bold mb-3">Wat ik nu doe,<br />5-10% beter</h3>
                 <p className="text-gray-600">Huidige processen optimaliseren, incrementele efficiëntiewinst, beheersbare verbeteringen</p>
@@ -405,9 +406,9 @@ export default function ThinkTenXLanding() {
               <button
                 onClick={() => handleQuizAnswer('10x')}
                 className={`p-6 rounded-xl border-2 transition ${
-                  selectedAnswer === '10x' ? 'bg-gray-50' : 'border-gray-200 hover:border-gray-400'
+                  selectedAnswer === '10x' ? '' : 'border-gray-200 hover:border-gray-400'
                 }`}
-                style={selectedAnswer === '10x' ? { borderColor: '#d4db3e' } : {}}
+                style={selectedAnswer === '10x' ? { borderColor: '#d4db3e', backgroundColor: '#fafbf0' } : {}}
               >
                 <h3 className="text-xl font-bold mb-3">Iets radicaal<br />anders en 10X beter</h3>
                 <p className="text-gray-600">Businessmodellen transformeren, waardeproposities herdenken, revolutionair veranderen</p>
