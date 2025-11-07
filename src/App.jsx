@@ -757,7 +757,7 @@ export default function ThinkTenXLanding() {
               <div className="mt-6 pt-6 border-t">
                 <a href="#tracks" className="block w-full px-8 py-4 rounded-lg font-semibold text-center transition transform hover:scale-105"
                    style={{ backgroundColor: '#d4db3e' }}>
-                  Ja, ik ben klaar →
+                  Ja, ik ben klaar om te bouwen →
                 </a>
               </div>
             </div>
