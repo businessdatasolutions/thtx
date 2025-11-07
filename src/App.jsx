@@ -816,10 +816,6 @@ export default function ThinkTenXLanding() {
             >
               hello@thtx.nl
             </a>
-
-            <p className="text-gray-600">
-              of connect op <a href="https://linkedin.com" className="underline hover:no-underline">LinkedIn</a>
-            </p>
           </div>
 
           <div className="mt-16 p-8 rounded-xl" style={{ backgroundColor: '#dcebf3' }}>
@@ -863,7 +859,6 @@ export default function ThinkTenXLanding() {
               <h4 className="font-bold mb-4">Connect</h4>
               <ul className="space-y-2 text-gray-400">
                 <li><a href="mailto:hello@thtx.nl" className="hover:text-white">hello@thtx.nl</a></li>
-                <li><a href="#" className="hover:text-white">LinkedIn</a></li>
               </ul>
             </div>
           </div>
