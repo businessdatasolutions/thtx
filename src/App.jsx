@@ -737,10 +737,16 @@ export default function ThinkTenXLanding() {
             </div>
           </div>
           
-          <p className="text-center text-gray-600 mt-8 text-lg">
-            <strong>Let op:</strong> We wijzen met respect 40-50% van organisatie-aanvragen af.<br />
-            We werken alleen met klanten die klaar zijn voor échte transformatie.
-          </p>
+          <div className="mt-16 p-8 rounded-xl" style={{ backgroundColor: '#dcebf3' }}>
+            <p className="text-lg text-gray-700 mb-4">
+              <strong>Early-bird voordelen:</strong><br />
+              30% korting · On-site intakedag · Lifetime alumni status
+            </p>
+            <p className="text-sm text-gray-600">
+              Eerste 2 workshops krijgen speciale pioneer pricing.<br />
+              Klaar om te bouwen? Laten we transformeren.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -840,17 +846,6 @@ export default function ThinkTenXLanding() {
             >
               hello@thtx.nl
             </button>
-          </div>
-
-          <div className="mt-16 p-8 rounded-xl" style={{ backgroundColor: '#dcebf3' }}>
-            <p className="text-lg text-gray-700 mb-4">
-              <strong>Early-bird voordelen:</strong><br />
-              30% korting · On-site intakedag · Lifetime alumni status
-            </p>
-            <p className="text-sm text-gray-600">
-              Eerste 2 workshops krijgen speciale pioneer pricing.<br />
-              Zoek je transformatie? Laten we praten.
-            </p>
           </div>
         </div>
       </section>
