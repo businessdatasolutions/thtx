@@ -888,7 +888,7 @@ export default function ThinkTenXLanding() {
           </div>
           
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 THTX.nl - Voor leiders klaar om te herdenken, niet alleen te verfijnen.</p>
+            <p>&copy; 2025 THTX.nl - Voor leiders die transformeren, niet optimaliseren.</p>
           </div>
         </div>
       </footer>
