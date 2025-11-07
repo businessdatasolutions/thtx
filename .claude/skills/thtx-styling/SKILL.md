@@ -352,8 +352,7 @@ When styling a new component:
 
 For complete documentation, see:
 
-- Full style guide: `/workspaces/thtx/.claude/skills/thtx-styling/STYLE_GUIDE.md`
-- Additional examples: `/workspaces/thtx/.claude/skills/thtx-styling/REFERENCE.md`
+- Complete style guide: `/workspaces/thtx/.claude/skills/thtx-styling/STYLE_GUIDE.md`
 - Component implementation: `/workspaces/thtx/src/App.jsx`
 
 Always prioritize consistency with existing components.
