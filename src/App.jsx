@@ -26,7 +26,7 @@ export default function ThinkTenXLanding() {
   return (
     <div className="min-h-screen bg-white text-gray-900">
       {/* Navigation */}
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
+      <nav aria-label="Hoofdnavigatie" className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center space-x-2">
@@ -44,7 +44,12 @@ export default function ThinkTenXLanding() {
               </a>
             </div>
 
-            <button className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+            <button
+              className="md:hidden"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+              aria-expanded={mobileMenuOpen}
+            >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
@@ -66,7 +71,7 @@ export default function ThinkTenXLanding() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <section aria-label="Hero" className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center space-y-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold mb-4" style={{ backgroundColor: '#def0fa' }}>
@@ -115,7 +120,7 @@ export default function ThinkTenXLanding() {
       </section>
 
       {/* MPAC Case Study Section */}
-      <section id="example" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <section id="example" aria-label="Case study voorbeeld" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4" style={{ backgroundColor: '#def0fa' }}>
@@ -380,7 +385,7 @@ export default function ThinkTenXLanding() {
       </section>
 
       {/* The Challenge Quiz */}
-      <section id="quiz" className="py-20 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#dcebf3' }}>
+      <section id="quiz" aria-label="10X Challenge quiz" className="py-20 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#dcebf3' }}>
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12">
             De 10X Challenge
@@ -465,7 +470,7 @@ export default function ThinkTenXLanding() {
       )}
 
       {/* Manifesto */}
-      <section id="manifesto" className="py-20 px-4 sm:px-6 lg:px-8">
+      <section id="manifesto" aria-label="Manifesto" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-bold text-center mb-12">
             Het Bevrijdingsprotocol
@@ -523,7 +528,7 @@ export default function ThinkTenXLanding() {
       </section>
 
       {/* How It Works */}
-      <section id="how-it-works" className="py-20 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#dcebf3' }}>
+      <section id="how-it-works" aria-label="Hoe het werkt" className="py-20 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#dcebf3' }}>
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-16">Hoe de beweging werkt</h2>
 
@@ -562,7 +567,7 @@ export default function ThinkTenXLanding() {
       </section>
 
       {/* Two Tracks */}
-      <section id="tracks" className="py-20 px-4 sm:px-6 lg:px-8">
+      <section id="tracks" aria-label="Programma's en tracks" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-4">Twee paden naar transformatie</h2>
           <p className="text-xl text-gray-600 text-center mb-16">
@@ -808,7 +813,7 @@ export default function ThinkTenXLanding() {
       </section>
 
       {/* CTA Section */}
-      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
+      <section id="contact" aria-label="Contact en inschrijving" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl sm:text-5xl font-bold mb-8">
             Klaar om te bouwen wat jij voor ogen hebt?
@@ -846,7 +851,7 @@ export default function ThinkTenXLanding() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white">
+      <footer aria-label="Site footer" className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
