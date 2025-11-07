@@ -866,7 +866,7 @@ export default function ThinkTenXLanding() {
               </div>
               <p className="text-gray-400">
                 De Solutions Architect Beweging<br />
-                Think Ten X
+                Think 10X and grow your AIR!
               </p>
             </div>
             
