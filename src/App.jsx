@@ -5,6 +5,9 @@ export default function ThinkTenXLanding() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const [showContactModal, setShowContactModal] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -21,6 +24,34 @@ export default function ThinkTenXLanding() {
         document.getElementById('not-for-you').scrollIntoView({ behavior: 'smooth' });
       }
     }, 500);
+  };
+
+  const handleContactSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.target);
+
+    try {
+      const response = await fetch('https://formspree.io/f/xnnlaano', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        setFormSubmitted(true);
+        e.target.reset();
+      } else {
+        alert('Er ging iets mis. Probeer het opnieuw of stuur een email naar hello@thtx.nl');
+      }
+    } catch (error) {
+      alert('Er ging iets mis. Probeer het opnieuw of stuur een email naar hello@thtx.nl');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -74,10 +105,11 @@ export default function ThinkTenXLanding() {
       <section aria-label="Hero" className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold mb-4" style={{ backgroundColor: '#def0fa' }}>
-              <Zap className="w-4 h-4" style={{ color: '#d4db3e' }} />
-              De Solutions Architect Beweging · Lancering Februari 2026
-            </div>
+            <a href="#tracks" className="inline-flex items-center gap-3 px-6 py-3 rounded-full text-base font-bold mb-4 border-2 shadow-lg transition transform hover:scale-105 cursor-pointer" style={{ backgroundColor: '#d4db3e', borderColor: '#d4db3e', color: '#000' }}>
+              <img src="/logo.png" alt="THTX" className="w-6 h-6" />
+              <span>De Solutions Architect Beweging · Lancering Februari 2026</span>
+              <ArrowRight className="w-4 h-4 ml-1" />
+            </a>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
               Voor visionairs die<br />
@@ -112,7 +144,7 @@ export default function ThinkTenXLanding() {
       <section id="example" aria-label="Case study voorbeeld" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <div className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4" style={{ backgroundColor: '#def0fa' }}>
+            <div className="inline-block px-6 py-3 rounded-full text-base font-bold mb-4 border-2 shadow-lg" style={{ backgroundColor: '#d4db3e', borderColor: '#d4db3e', color: '#000' }}>
               De Solutions Architect Aanpak
             </div>
             <h2 className="text-4xl font-bold mb-4">
@@ -798,13 +830,13 @@ export default function ThinkTenXLanding() {
           </p>
 
           <div className="space-y-6">
-            <a
-              href="mailto:hello@thtx.nl"
-              className="inline-block px-10 py-4 rounded-lg text-xl font-semibold transition transform hover:scale-105 shadow-lg"
+            <button
+              onClick={() => setShowContactModal(true)}
+              className="inline-block px-10 py-4 rounded-lg text-xl font-semibold transition transform hover:scale-105 shadow-lg cursor-pointer"
               style={{ backgroundColor: '#d4db3e' }}
             >
               hello@thtx.nl
-            </a>
+            </button>
           </div>
 
           <div className="mt-16 p-8 rounded-xl" style={{ backgroundColor: '#dcebf3' }}>
@@ -847,7 +879,7 @@ export default function ThinkTenXLanding() {
             <div>
               <h4 className="font-bold mb-4">Connect</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="mailto:hello@thtx.nl" className="hover:text-white">hello@thtx.nl</a></li>
+                <li><button onClick={() => setShowContactModal(true)} className="hover:text-white cursor-pointer">hello@thtx.nl</button></li>
               </ul>
             </div>
           </div>
@@ -857,6 +889,102 @@ export default function ThinkTenXLanding() {
           </div>
         </div>
       </footer>
+
+      {/* Contact Modal */}
+      {showContactModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-50" onClick={() => { setShowContactModal(false); setFormSubmitted(false); }}>
+          <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative" onClick={(e) => e.stopPropagation()}>
+            <button
+              onClick={() => { setShowContactModal(false); setFormSubmitted(false); }}
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition"
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            {!formSubmitted ? (
+              <>
+                <h3 className="text-3xl font-bold mb-2">Neem contact op</h3>
+                <p className="text-gray-600 mb-6">Laat je gegevens achter en we nemen contact met je op.</p>
+
+                <form onSubmit={handleContactSubmit} className="space-y-4">
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-semibold mb-2">
+                      Email adres *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-yellow-400 focus:outline-none transition"
+                      placeholder="jouw@email.nl"
+                    />
+                  </div>
+
+                  <div className="space-y-3">
+                    <label className="flex items-start gap-3 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        name="inschrijfpakket"
+                        value="ja"
+                        className="mt-1 w-5 h-5 border-2 border-gray-300 rounded focus:ring-2 focus:ring-yellow-400"
+                      />
+                      <span className="text-sm">Stuur me het inschrijfpakket toe</span>
+                    </label>
+
+                    <label className="flex items-start gap-3 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        name="nieuwsbrief"
+                        value="ja"
+                        className="mt-1 w-5 h-5 border-2 border-gray-300 rounded focus:ring-2 focus:ring-yellow-400"
+                      />
+                      <span className="text-sm">Abonneer me op de nieuwsbrief</span>
+                    </label>
+                  </div>
+
+                  <div>
+                    <label htmlFor="bericht" className="block text-sm font-semibold mb-2">
+                      Bericht (optioneel)
+                    </label>
+                    <textarea
+                      id="bericht"
+                      name="bericht"
+                      rows="4"
+                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-yellow-400 focus:outline-none transition resize-none"
+                      placeholder="Vertel ons meer over je situatie..."
+                    ></textarea>
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full px-8 py-4 rounded-lg font-bold text-lg transition transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                    style={{ backgroundColor: '#d4db3e' }}
+                  >
+                    {isSubmitting ? 'Versturen...' : 'Verstuur'}
+                  </button>
+                </form>
+              </>
+            ) : (
+              <div className="text-center py-8">
+                <CheckCircle className="w-16 h-16 mx-auto mb-4" style={{ color: '#d4db3e' }} />
+                <h3 className="text-2xl font-bold mb-2">Bedankt!</h3>
+                <p className="text-gray-600 mb-6">
+                  We hebben je bericht ontvangen en nemen zo snel mogelijk contact met je op.
+                </p>
+                <button
+                  onClick={() => { setShowContactModal(false); setFormSubmitted(false); }}
+                  className="px-6 py-3 rounded-lg font-semibold transition"
+                  style={{ backgroundColor: '#d4db3e' }}
+                >
+                  Sluiten
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
