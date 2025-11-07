@@ -132,7 +132,7 @@ export default function ThinkTenXLanding() {
           {/* Three-column layout: Problem → Solution → Impact */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {/* Problem */}
-            <div className="bg-gray-50 p-6 rounded-xl border-2 border-red-300">
+            <div className="bg-gray-50 p-6 rounded-xl border-2" style={{ borderColor: '#ff6984' }}>
               <div className="text-red-600 font-semibold mb-2 flex items-center gap-2">
                 <AlertCircle className="w-5 h-5" />
                 Het Probleem
@@ -144,7 +144,7 @@ export default function ThinkTenXLanding() {
                 <li>• Alleen seniors vinden snel info</li>
                 <li>• Klanten wachten op antwoorden</li>
               </ul>
-              <div className="mt-4 pt-4 border-t border-red-300">
+              <div className="mt-4 pt-4 border-t" style={{ borderColor: '#ff6984' }}>
                 <div className="font-semibold text-red-600">
                   €11.250/maand verloren tijd
                 </div>
@@ -194,7 +194,7 @@ export default function ThinkTenXLanding() {
 
           {/* Timeline: How it was built */}
           <div className="bg-gray-50 p-6 rounded-xl mb-8">
-            <h4 className="font-semibold mb-4 text-center">Van Idee naar Werkend Systeem</h4>
+            <h4 className="font-semibold mb-4 text-center">Van idee naar werkend systeem</h4>
             <div className="flex items-center justify-between max-w-3xl mx-auto">
               <div className="text-center flex-1">
                 <div className="w-12 h-12 rounded-full mx-auto mb-2 flex items-center justify-center text-white font-bold"
