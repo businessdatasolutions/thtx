@@ -845,7 +845,7 @@ export default function ThinkTenXLanding() {
           <div className="mt-16 p-8 rounded-xl" style={{ backgroundColor: '#dcebf3' }}>
             <p className="text-lg text-gray-700 mb-4">
               <strong>Early-bird voordelen:</strong><br />
-              30% korting · Extra co-creatie tijd · Lifetime alumni status
+              30% korting · On-site intakedag · Lifetime alumni status
             </p>
             <p className="text-sm text-gray-600">
               Eerste 2 workshops krijgen speciale pioneer pricing.<br />
