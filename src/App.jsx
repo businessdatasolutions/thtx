@@ -152,7 +152,7 @@ export default function ThinkTenXLanding() {
             </div>
 
             {/* Solution */}
-            <div className="bg-gray-50 p-6 rounded-xl border-2 border-blue-300">
+            <div className="bg-gray-50 p-6 rounded-xl border-2" style={{ borderColor: '#00d1ff' }}>
               <div className="text-blue-600 font-semibold mb-2 flex items-center gap-2">
                 <Lightbulb className="w-5 h-5" />
                 De Oplossing
@@ -164,7 +164,7 @@ export default function ThinkTenXLanding() {
                 <li>• Vision AI voor tekst extractie</li>
                 <li>• User feedback voor ranking</li>
               </ul>
-              <div className="mt-4 pt-4 border-t border-blue-300">
+              <div className="mt-4 pt-4 border-t" style={{ borderColor: '#00d1ff' }}>
                 <div className="font-semibold text-blue-600">
                   115/115 tests passing
                 </div>
