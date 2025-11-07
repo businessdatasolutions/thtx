@@ -473,7 +473,7 @@ export default function ThinkTenXLanding() {
       <section id="manifesto" aria-label="Manifesto" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-bold text-center mb-12">
-            Het Bevrijdingsprotocol
+            Ons Manifesto
           </h2>
 
           <div className="space-y-8 text-lg leading-relaxed">
