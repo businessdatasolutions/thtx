@@ -108,7 +108,7 @@ export default function ThinkTenXLanding() {
         </div>
       </section>
 
-      {/* MPAC Case Study Section */}
+      {/* Case Study Section */}
       <section id="example" aria-label="Case study voorbeeld" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
@@ -119,7 +119,7 @@ export default function ThinkTenXLanding() {
               Van probleem naar werkende oplossing in 90 dagen
             </h2>
             <p className="text-xl text-gray-600">
-              Een voorbeeld: Document search AI voor MPAC Group
+              Een voorbeeld: Document search AI voor een machinebouwer
             </p>
           </div>
 
@@ -286,7 +286,7 @@ export default function ThinkTenXLanding() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            {/* Card 1: MPAC (real example) */}
+            {/* Card 1: Real example */}
             <div className="bg-white p-6 rounded-xl shadow-lg border-2" style={{ borderColor: '#d4db3e' }}>
               <div className="flex items-center gap-2 mb-3">
                 <div className="w-10 h-10 rounded-lg flex items-center justify-center text-white"
@@ -310,7 +310,7 @@ export default function ThinkTenXLanding() {
                 met AI samenvatting en intelligent search.
               </p>
               <div className="text-xs text-gray-500 pt-3 border-t">
-                Experiment voor MPAC Group<br />
+                Experiment voor een machinebouwer<br />
                 12 weken · €11.250/maand impact
               </div>
             </div>
@@ -427,7 +427,7 @@ export default function ThinkTenXLanding() {
             </p>
             <p className="text-lg text-gray-600 mb-8">
               We raden aan om traditionele consultancy-bureaus of optimalisatie-gerichte trainingen te verkennen.<br />
-              Wanneer je klaar bent om te herdenken wat mogelijk is, zijn we hier.
+              Als je klaar bent om te bouwen, zijn we er.
             </p>
             <button
               onClick={() => setSelectedAnswer(null)}
