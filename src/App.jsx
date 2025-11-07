@@ -585,13 +585,13 @@ export default function ThinkTenXLanding() {
                   <Users className="w-12 h-12" />
                   <div className="px-3 py-1 rounded-full text-sm font-semibold text-white"
                        style={{ backgroundColor: '#d4db3e' }}>
-                    Early-bird: -40%
+                    Early-bird: -30%
                   </div>
                 </div>
                 <h3 className="text-3xl font-bold mb-2">Track 1</h3>
                 <p className="text-xl font-semibold mb-4">Professionele ontwikkelingsworkshops</p>
                 <div className="flex items-baseline gap-2">
-                  <div className="text-4xl font-bold" style={{ color: '#d4db3e' }}>€1.500</div>
+                  <div className="text-4xl font-bold" style={{ color: '#d4db3e' }}>€1.750</div>
                   <div className="text-lg text-gray-400 line-through">€2.500</div>
                 </div>
                 <div className="text-gray-600 mb-2">per persoon · early-bird</div>
@@ -652,13 +652,13 @@ export default function ThinkTenXLanding() {
                   <Target className="w-12 h-12" />
                   <div className="px-3 py-1 rounded-full text-sm font-semibold text-white"
                        style={{ backgroundColor: '#d4db3e' }}>
-                    Early-bird: -40%
+                    Early-bird: -30%
                   </div>
                 </div>
                 <h3 className="text-3xl font-bold mb-2">Track 2</h3>
                 <p className="text-xl font-semibold mb-4">Organisatietransformatie</p>
                 <div className="flex items-baseline gap-2">
-                  <div className="text-4xl font-bold" style={{ color: '#d4db3e' }}>€15.000</div>
+                  <div className="text-4xl font-bold" style={{ color: '#d4db3e' }}>€17.500</div>
                   <div className="text-lg text-gray-400 line-through">€25.000</div>
                 </div>
                 <div className="text-gray-600 mb-2">per organisatie · early-bird</div>
@@ -843,7 +843,7 @@ export default function ThinkTenXLanding() {
           <div className="mt-16 p-8 rounded-xl" style={{ backgroundColor: '#dcebf3' }}>
             <p className="text-lg text-gray-700 mb-4">
               <strong>Early-bird voordelen:</strong><br />
-              40% korting · Extra co-creatie tijd · Lifetime alumni status
+              30% korting · Extra co-creatie tijd · Lifetime alumni status
             </p>
             <p className="text-sm text-gray-600">
               Eerste 2 workshops krijgen speciale pioneer pricing.<br />
