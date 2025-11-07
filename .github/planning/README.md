@@ -8,11 +8,15 @@ Deze directory bevat planning documenten, brainstorms, feature ideeën en archit
 .github/planning/
 ├── README.md (dit bestand)
 ├── brainstorms/          # Creatieve sessies en ideeën
+├── campaigns/            # Marketing campagnes en content strategieën
 ├── feature-ideas/        # Concrete feature voorstellen
 └── decisions/            # Architecture Decision Records (ADRs)
 ```
 
 ## 🚀 Actieve Projecten
+
+### Campagnes
+- [LinkedIn 10X Transformatie Week](./campaigns/linkedin-10x-week.md) - 5-daagse thought leadership campagne met polls
 
 ### Brainstorms
 - [Visionary Voices Initiative](./brainstorms/visionary-voices.md) - 15 concrete ideeën voor content, community en engagement
@@ -26,10 +30,11 @@ Deze directory bevat planning documenten, brainstorms, feature ideeën en archit
 
 ## 📋 Workflow
 
-1. **Nieuwe ideeën** → Brainstorm document aanmaken
-2. **Concrete features** → Feature idea document + GitHub Issue aanmaken
-3. **Belangrijke beslissingen** → ADR document toevoegen
-4. **Ready to build** → GitHub Issue toewijzen en starten
+1. **Nieuwe ideeën** → Brainstorm document aanmaken in `brainstorms/`
+2. **Marketing campagnes** → Campagne draaiboek in `campaigns/`
+3. **Concrete features** → Feature idea document + GitHub Issue aanmaken
+4. **Belangrijke beslissingen** → ADR document toevoegen in `decisions/`
+5. **Ready to build** → GitHub Issue toewijzen en starten
 
 ## 🔗 Links
 
@@ -41,9 +46,10 @@ Deze directory bevat planning documenten, brainstorms, feature ideeën en archit
 
 Heb je een nieuw idee of feature voorstel?
 
-1. Voor brainstorms: Voeg toe aan bestaand document of maak nieuw document in `brainstorms/`
-2. Voor features: Maak document in `feature-ideas/` en een GitHub Issue
-3. Voor beslissingen: Maak ADR in `decisions/` met nummer en duidelijke rationale
+1. **Voor brainstorms**: Voeg toe aan bestaand document of maak nieuw document in `brainstorms/`
+2. **Voor campagnes**: Maak campagne draaiboek in `campaigns/` met uitvoeringsplan
+3. **Voor features**: Maak document in `feature-ideas/` en een GitHub Issue
+4. **Voor beslissingen**: Maak ADR in `decisions/` met nummer en duidelijke rationale
 
 ---
 
