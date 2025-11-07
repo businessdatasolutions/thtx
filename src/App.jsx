@@ -737,7 +737,7 @@ export default function ThinkTenXLanding() {
             </div>
           </div>
           
-          <div className="mt-16 p-8 rounded-xl" style={{ backgroundColor: '#dcebf3' }}>
+          <div className="mt-16 p-8 rounded-xl text-center" style={{ backgroundColor: '#dcebf3' }}>
             <p className="text-lg text-gray-700 mb-4">
               <strong>Early-bird voordelen:</strong><br />
               30% korting · On-site intakedag · Lifetime alumni status
