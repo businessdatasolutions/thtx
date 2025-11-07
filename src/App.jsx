@@ -110,7 +110,7 @@ export default function ThinkTenXLanding() {
           <div className="text-center space-y-8">
             <a href="#tracks" className="inline-flex items-center gap-3 px-6 py-3 rounded-full text-base font-bold mb-4 border-2 shadow-lg transition transform hover:scale-105 cursor-pointer" style={{ backgroundColor: '#d4db3e', borderColor: '#d4db3e', color: '#000' }}>
               <img src="/logo.png" alt="THTX" className="w-6 h-6" />
-              <span>De Solutions Architect Beweging · Lancering Februari 2026</span>
+              <span>De AI Solutions Architect Beweging · Lancering Februari 2026</span>
               <ArrowRight className="w-4 h-4 ml-1" />
             </a>
 
@@ -148,7 +148,7 @@ export default function ThinkTenXLanding() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-block px-6 py-3 rounded-full text-base font-bold mb-4 border-2 shadow-lg" style={{ backgroundColor: '#d4db3e', borderColor: '#d4db3e', color: '#000' }}>
-              De Solutions Architect Aanpak
+              De AI Solutions Architect Aanpak
             </div>
             <h2 className="text-4xl font-bold mb-4">
               Van probleem naar werkende oplossing in 90 dagen
@@ -258,7 +258,7 @@ export default function ThinkTenXLanding() {
           {/* CTA */}
           <div className="text-center">
             <p className="text-gray-600 mb-4">
-              Dit is hoe <strong>Solutions Architects</strong> werken:<br />
+              Dit is hoe <strong>AI Solutions Architects</strong> werken:<br />
               Niet consultants die opleveringen, maar professionals die capaciteit bouwen.
             </p>
             <p className="text-sm text-gray-500 mb-6">
@@ -860,7 +860,7 @@ export default function ThinkTenXLanding() {
                 <span className="text-xl font-bold">THTX.nl</span>
               </div>
               <p className="text-gray-400">
-                De Solutions Architect Beweging<br />
+                De AI Solutions Architect Beweging<br />
                 Think 10X and grow your AIR!
               </p>
             </div>
