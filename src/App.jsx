@@ -392,6 +392,9 @@ export default function ThinkTenXLanding() {
           </h2>
 
           <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <p className="text-sm text-gray-600 text-center mb-2">
+              Klik op je keuze
+            </p>
             <p className="text-2xl font-semibold mb-8 text-center">
               Jouw ideale uitkomst is:
             </p>
@@ -399,7 +402,7 @@ export default function ThinkTenXLanding() {
             <div className="grid md:grid-cols-2 gap-6">
               <button
                 onClick={() => handleQuizAnswer('10percent')}
-                className={`p-6 rounded-xl border-2 transition ${
+                className={`p-6 rounded-xl border-2 transition cursor-pointer hover:scale-105 ${
                   selectedAnswer === '10percent' ? '' : 'border-gray-200 hover:border-gray-400'
                 }`}
                 style={selectedAnswer === '10percent' ? { borderColor: '#ff6984', backgroundColor: '#fff5f7' } : {}}
@@ -410,7 +413,7 @@ export default function ThinkTenXLanding() {
 
               <button
                 onClick={() => handleQuizAnswer('10x')}
-                className={`p-6 rounded-xl border-2 transition ${
+                className={`p-6 rounded-xl border-2 transition cursor-pointer hover:scale-105 ${
                   selectedAnswer === '10x' ? '' : 'border-gray-200 hover:border-gray-400'
                 }`}
                 style={selectedAnswer === '10x' ? { borderColor: '#d4db3e', backgroundColor: '#fafbf0' } : {}}
