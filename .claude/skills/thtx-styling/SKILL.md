@@ -351,7 +351,9 @@ When styling a new component:
 ## Reference
 
 For complete documentation, see:
-- Full style guide: `/workspaces/thtx/STYLE_GUIDE.md`
+
+- Full style guide: `/workspaces/thtx/.claude/skills/thtx-styling/STYLE_GUIDE.md`
+- Additional examples: `/workspaces/thtx/.claude/skills/thtx-styling/REFERENCE.md`
 - Component implementation: `/workspaces/thtx/src/App.jsx`
 
 Always prioritize consistency with existing components.
