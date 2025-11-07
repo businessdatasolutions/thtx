@@ -405,8 +405,9 @@ export default function ThinkTenXLanding() {
               <button
                 onClick={() => handleQuizAnswer('10x')}
                 className={`p-6 rounded-xl border-2 transition ${
-                  selectedAnswer === '10x' ? 'border-green-500 bg-green-50' : 'border-gray-200 hover:border-gray-400'
+                  selectedAnswer === '10x' ? 'bg-gray-50' : 'border-gray-200 hover:border-gray-400'
                 }`}
+                style={selectedAnswer === '10x' ? { borderColor: '#d4db3e' } : {}}
               >
                 <h3 className="text-xl font-bold mb-3">Iets radicaal<br />anders en 10X beter</h3>
                 <p className="text-gray-600">Businessmodellen transformeren, waardeproposities herdenken, revolutionair veranderen</p>
