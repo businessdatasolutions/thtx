@@ -420,9 +420,9 @@ export default function ThinkTenXLanding() {
 
       {/* Not For You Section */}
       {selectedAnswer === '10percent' && (
-        <section id="not-for-you" className="py-20 px-4 sm:px-6 lg:px-8 bg-red-50 border-t-4 border-red-500">
+        <section id="not-for-you" className="py-20 px-4 sm:px-6 lg:px-8 border-t-4" style={{ backgroundColor: '#fff5f7', borderColor: '#ff6984' }}>
           <div className="max-w-4xl mx-auto text-center">
-            <XCircle className="w-16 h-16 text-red-500 mx-auto mb-6" />
+            <XCircle className="w-16 h-16 mx-auto mb-6" style={{ color: '#ff6984' }} />
             <h2 className="text-4xl font-bold mb-6">We zijn niet de juiste fit</h2>
             <p className="text-xl text-gray-700 mb-6">
               Er is niks mis met incrementele verbetering zoeken — maar wij specialiseren ons in radicale transformatie.<br />
