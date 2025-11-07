@@ -753,13 +753,6 @@ export default function ThinkTenXLanding() {
                   <span>"Ik wil leren van andere industrieën"</span>
                 </li>
               </ul>
-
-              <div className="mt-6 pt-6 border-t">
-                <p className="text-sm text-gray-600">
-                  <strong>Herken je jezelf in het MPAC voorbeeld?</strong><br />
-                  "Die 2 uur zoeken was gewoon normaal... tot we het anders deden."
-                </p>
-              </div>
             </div>
 
             {/* Niet Voor Jou */}
@@ -785,20 +778,6 @@ export default function ThinkTenXLanding() {
                   <span>Liever eerst resultaten van anderen ziet (februari 2026)</span>
                 </li>
               </ul>
-
-              <div className="pt-6 border-t">
-                <p className="font-semibold mb-2">En dat is prima.</p>
-                <p className="text-sm text-gray-600 mb-4">
-                  Voor incrementele verbetering raden we aan:<br />
-                  → Traditionele proces consultancy<br />
-                  → Efficiency-gerichte trainingen<br />
-                  → Standaard AI workshops
-                </p>
-                <p className="text-sm text-gray-700">
-                  Wanneer je klaar bent om te herdenken wat mogelijk is,<br />
-                  zijn we hier. Ook in 2027.
-                </p>
-              </div>
             </div>
           </div>
 
