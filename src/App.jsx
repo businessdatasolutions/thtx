@@ -104,17 +104,6 @@ export default function ThinkTenXLanding() {
                 Lees het manifesto
               </a>
             </div>
-
-            <div className="pt-8 text-sm text-gray-600">
-              <div className="font-semibold mb-2">Een beweging, geen consultancy</div>
-              <div className="flex items-center justify-center gap-6 flex-wrap">
-                <div>26% naar junior talent</div>
-                <div>·</div>
-                <div>40-50% afwijzing voor alignment</div>
-                <div>·</div>
-                <div>Cross-industry samenwerking</div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
