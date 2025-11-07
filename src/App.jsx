@@ -924,6 +924,41 @@ export default function ThinkTenXLanding() {
                     />
                   </div>
 
+                  <div>
+                    <label className="block text-sm font-semibold mb-3">
+                      Wat wil je bereiken? *
+                    </label>
+                    <div className="space-y-3">
+                      <label className="flex items-start gap-3 cursor-pointer p-3 border-2 border-gray-300 rounded-lg hover:border-yellow-400 transition">
+                        <input
+                          type="radio"
+                          name="doel"
+                          value="10%"
+                          required
+                          className="mt-0.5 w-5 h-5 border-2 border-gray-300 focus:ring-2 focus:ring-yellow-400"
+                        />
+                        <div>
+                          <span className="text-sm font-semibold block">10% verbetering</span>
+                          <span className="text-xs text-gray-600">Optimalisatie van bestaande processen</span>
+                        </div>
+                      </label>
+
+                      <label className="flex items-start gap-3 cursor-pointer p-3 border-2 border-gray-300 rounded-lg hover:border-yellow-400 transition">
+                        <input
+                          type="radio"
+                          name="doel"
+                          value="10X"
+                          required
+                          className="mt-0.5 w-5 h-5 border-2 border-gray-300 focus:ring-2 focus:ring-yellow-400"
+                        />
+                        <div>
+                          <span className="text-sm font-semibold block">10X transformatie</span>
+                          <span className="text-xs text-gray-600">Radicale vernieuwing en doorbraak</span>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+
                   <div className="space-y-3">
                     <label className="flex items-start gap-3 cursor-pointer">
                       <input
