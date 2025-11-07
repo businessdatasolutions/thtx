@@ -60,11 +60,14 @@ export default function ThinkTenXLanding() {
       <nav aria-label="Hoofdnavigatie" className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            <div className="flex items-center space-x-2">
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="flex items-center space-x-2 cursor-pointer hover:opacity-80 transition"
+            >
               <img src="/logo.png" alt="THTX Logo" className="w-8 h-8" />
               <span className="text-2xl font-bold">THTX</span>
               <span className="text-sm text-gray-500 hidden sm:inline">.nl</span>
-            </div>
+            </button>
             
             <div className="hidden md:flex space-x-8 items-center">
               <a href="#example" className="text-gray-700 hover:text-gray-900 transition">Voorbeeld</a>
