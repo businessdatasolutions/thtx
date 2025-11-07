@@ -753,6 +753,13 @@ export default function ThinkTenXLanding() {
                   <span>"Ik wil leren van andere industrieën"</span>
                 </li>
               </ul>
+
+              <div className="mt-6 pt-6 border-t">
+                <a href="#tracks" className="block w-full px-8 py-4 rounded-lg font-semibold text-center transition transform hover:scale-105"
+                   style={{ backgroundColor: '#d4db3e' }}>
+                  Ja, ik ben klaar →
+                </a>
+              </div>
             </div>
 
             {/* Niet Voor Jou */}
@@ -778,18 +785,14 @@ export default function ThinkTenXLanding() {
                   <span>Liever eerst resultaten van anderen ziet (februari 2026)</span>
                 </li>
               </ul>
-            </div>
-          </div>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="#tracks" className="px-8 py-4 rounded-lg font-semibold text-center transition transform hover:scale-105"
-               style={{ backgroundColor: '#d4db3e' }}>
-              Ja, ik ben klaar →
-            </a>
-            <a href="#contact" className="px-8 py-4 rounded-lg font-semibold text-center bg-white border-2 hover:bg-gray-50"
-               style={{ borderColor: '#d4db3e' }}>
-              Nog niet zeker - blijf me updaten
-            </a>
+              <div className="mt-6 pt-6 border-t">
+                <a href="#contact" className="block w-full px-8 py-4 rounded-lg font-semibold text-center bg-white border-2 hover:bg-gray-50"
+                   style={{ borderColor: '#d4db3e' }}>
+                  Nog niet zeker - blijf me updaten
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
