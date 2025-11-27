@@ -261,7 +261,7 @@ export default function ThinkTenXLanding() {
 
               <div className="bg-gray-800 p-6 rounded-xl">
                 <h3 className="text-xl font-bold mb-2" style={{ color: colors.primary }}>Hoe we bouwen</h3>
-                <p className="text-gray-300">Samen. Cross-industrieel. 2 junior professionals gratis per workshop. Want beweging krijg je door versnelling en ruimte.</p>
+                <p className="text-gray-300">Samen. Cross-industrieel. 2 junior professionals gratis per workshop. Want beweging krijg je door verbinding, versnelling en ruimte.</p>
               </div>
             </div>
           </div>
