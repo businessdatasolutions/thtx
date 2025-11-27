@@ -1,6 +1,6 @@
+/* Main app uses Tailwind via CDN in index.html */
 @import url('https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/lib/css/preflight.css');
 
-/* Tailwind is loaded via CDN in index.html */
 * {
   margin: 0;
   padding: 0;

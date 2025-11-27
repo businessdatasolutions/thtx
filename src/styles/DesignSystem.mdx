@@ -1,0 +1,282 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Design System/Introduction" />
+
+# THTX Design System
+
+Welcome to the THTX (Think Ten X) Design System documentation. This comprehensive guide covers all components, design tokens, patterns, and best practices used in the THTX website.
+
+## Overview
+
+The THTX design system is built on the principles of **consistency**, **simplicity**, and **scalability**. Every component follows these guidelines to ensure a cohesive user experience across the entire website.
+
+### Design Philosophy
+
+**Think Ten X** - Our design reflects exponential thinking:
+- **Bold & Confident**: Strong typography and vibrant colors command attention
+- **Clear & Direct**: No unnecessary complexity - every element has a purpose
+- **Human & Approachable**: Professional yet friendly, making complex topics accessible
+
+## Quick Start
+
+### Using Components
+
+All components are exported from `src/components/shared/`:
+
+```jsx
+import { Button, Card, Badge } from '@/components/shared';
+
+function MyComponent() {
+  return (
+    <Card title="Example" theme="solution">
+      <Badge variant="filled">New</Badge>
+      <Button variant="primary" size="lg">
+        Get Started
+      </Button>
+    </Card>
+  );
+}
+```
+
+### Using Design Tokens
+
+Import design tokens for consistent styling:
+
+```jsx
+import { colors, typography, spacing } from '@/styles/design-tokens';
+
+const MyStyledComponent = () => (
+  <div
+    className={`${spacing.card} ${typography.h3}`}
+    style={{ backgroundColor: colors.primary }}
+  >
+    Styled with design tokens
+  </div>
+);
+```
+
+## Core Components
+
+### Layout Components
+- **SectionHeader** - Consistent headers for page sections
+- **Card** - Versatile card with theme variants
+- **StepIndicator** - Process steps and workflows
+
+### Interactive Components
+- **Button** - Primary interaction element
+- **Badge** - Labels and status indicators
+
+### Content Components
+- **FeatureListItem** - Feature lists with icons
+- **PricingDisplay** - Pricing information display
+
+## Design Tokens
+
+### Colors
+
+#### Primary Color
+- **Yellow (`#d4db3e`)** - Brand color, CTAs, highlights
+
+#### Accent Colors
+- **Pink (`#ff6984`)** - Problem indicators
+- **Cyan (`#00d1ff`)** - Solution indicators
+
+#### Background Colors
+- **Blue 1 (`#def0fa`)** - Light blue sections
+- **Blue 2 (`#dcebf3`)** - Alternate blue sections
+- **Yellow (`#fafbf0`)** - Impact sections
+- **Pink (`#fff5f7`)** - Problem sections
+- **Cyan (`#f0fbff`)** - Solution sections
+
+### Typography
+
+Our typography scale uses system fonts for optimal performance:
+
+- **H1**: `text-5xl md:text-7xl font-bold` - Hero titles
+- **H2**: `text-4xl font-bold` - Section titles
+- **H3**: `text-xl font-bold` - Card/subsection titles
+- **Body Large**: `text-lg` - Lead paragraphs
+- **Body**: `text-base` - Standard text
+- **Small**: `text-sm` - Captions and footnotes
+
+### Spacing
+
+Consistent spacing ensures visual rhythm:
+
+- **Section**: `py-16 px-4` - Top-level sections
+- **Card**: `p-6` - Standard card padding
+- **Card Large**: `p-8` - Spacious card padding
+
+## Theme System
+
+### Card Themes
+
+Cards support four theme variants:
+
+1. **Default** - Yellow accent for general content
+2. **Problem** - Pink accent for challenges
+3. **Solution** - Cyan accent for solutions
+4. **Impact** - Yellow background for results
+
+Each theme automatically adjusts border, background, and icon colors for visual consistency.
+
+## Best Practices
+
+### Component Usage
+
+**DO:**
+- ✅ Use semantic HTML (h1, h2, section, etc.)
+- ✅ Import components from the shared folder
+- ✅ Use design tokens for colors and spacing
+- ✅ Follow established patterns from existing code
+- ✅ Test responsive behavior on multiple devices
+
+**DON'T:**
+- ❌ Hardcode colors - use design tokens
+- ❌ Create inline styles when tokens exist
+- ❌ Nest headings incorrectly (h1 → h3 skip)
+- ❌ Override component styles arbitrarily
+- ❌ Ignore responsive design considerations
+
+### Accessibility
+
+All components follow WCAG 2.1 Level AA guidelines:
+
+- **Color Contrast**: Text meets minimum contrast ratios
+- **Keyboard Navigation**: All interactive elements are keyboard accessible
+- **Screen Readers**: Semantic HTML and ARIA labels where needed
+- **Focus States**: Clear visual indicators for keyboard focus
+
+### Responsive Design
+
+Mobile-first approach with breakpoints:
+
+- **Mobile**: Default (< 768px)
+- **Tablet**: `md:` breakpoint (≥ 768px)
+- **Desktop**: Uses `md:` and larger classes
+
+## Component Patterns
+
+### Building a Section
+
+Typical section structure:
+
+```jsx
+<section className="py-16 px-4">
+  <SectionHeader
+    badge="Feature"
+    title="Section Title"
+    subtitle="Section description"
+  />
+
+  <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+    <Card theme="solution">
+      {/* Card content */}
+    </Card>
+    {/* More cards... */}
+  </div>
+</section>
+```
+
+### Building a CTA
+
+Effective call-to-action pattern:
+
+```jsx
+<div className="text-center">
+  <h2 className="text-4xl font-bold mb-4">
+    Ready to Transform?
+  </h2>
+  <p className="text-lg text-gray-600 mb-8">
+    Start your journey today
+  </p>
+  <div className="flex gap-4 justify-center">
+    <Button variant="primary" size="lg" icon={ArrowRight}>
+      Get Started
+    </Button>
+    <Button variant="secondary" size="lg">
+      Learn More
+    </Button>
+  </div>
+</div>
+```
+
+### Building a Feature List
+
+Clear feature presentation:
+
+```jsx
+<ul className="space-y-3">
+  <FeatureListItem icon={CheckCircle}>
+    Weekly coaching sessions
+  </FeatureListItem>
+  <FeatureListItem icon={CheckCircle}>
+    Hands-on support
+  </FeatureListItem>
+  <FeatureListItem icon={CheckCircle}>
+    Best practices & templates
+  </FeatureListItem>
+</ul>
+```
+
+## Content Guidelines
+
+### Voice & Tone
+
+- **Direct and Action-Oriented**: "Start your transformation" not "You could start"
+- **Confident yet Approachable**: "We help you achieve 10x growth" not "Maybe we can help"
+- **Clear over Clever**: Prioritize clarity over wordplay
+
+### Dutch Language
+
+Most content is in Dutch:
+- Use "jouw" (informal) not "uw" (formal)
+- Be conversational and direct
+- Maintain professional credibility
+
+## Development Workflow
+
+### Adding a New Component
+
+1. Create component in `src/components/shared/ComponentName.jsx`
+2. Add JSDoc comments documenting props
+3. Import and use design tokens
+4. Create story file `ComponentName.stories.jsx`
+5. Write comprehensive stories covering all variants
+6. Test responsiveness and accessibility
+7. Update this documentation
+
+### Modifying Design Tokens
+
+1. Update `src/styles/design-tokens.js`
+2. Update `design-tokens.stories.jsx` visualizations
+3. Test impact on existing components
+4. Document changes in `DESIGN_SYSTEM.md`
+
+## Browser Support
+
+- **Modern browsers**: Chrome, Firefox, Safari, Edge (latest 2 versions)
+- **Mobile browsers**: iOS Safari, Chrome Mobile
+- **Tailwind CSS** via CDN for main app
+- **Build-time Tailwind** for Storybook
+
+## Resources
+
+- **Storybook**: Interactive component documentation
+- **Design Tokens**: Visual reference for colors, typography, spacing
+- **Component Stories**: Real-world usage examples
+- **Accessibility Add-on**: WCAG compliance testing
+
+## Getting Help
+
+Questions about the design system?
+1. Check component stories for examples
+2. Review design token documentation
+3. Look at existing code in `src/App.jsx`
+4. Refer to `DESIGN_SYSTEM.md` in repository root
+
+---
+
+**Version**: 1.0.0
+**Last Updated**: November 2024
+**Maintained By**: THTX Development Team
