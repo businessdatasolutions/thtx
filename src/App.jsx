@@ -110,14 +110,6 @@ export default function ThinkTenXLanding() {
       <section aria-label="Hero" className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center space-y-8">
-            <a href="#tracks" className="inline-block">
-              <Badge className="px-6 py-3 text-base shadow-lg transition transform hover:scale-105 cursor-pointer">
-                <img src="/logo.png" alt="THTX" className="w-6 h-6" />
-                <span>De AI Solutions Architect Beweging · Lancering Februari 2026</span>
-                <ArrowRight className="w-4 h-4" />
-              </Badge>
-            </a>
-
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
               Voor visionairs die<br />
               <span style={{ color: colors.primary }}>10X denken</span>,<br />
@@ -136,9 +128,9 @@ export default function ThinkTenXLanding() {
 
             <div className="pt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="#example" icon={ArrowRight}>
-                Zie wat mogelijk is
+                Ontdek wat mogelijk is
               </Button>
-              <Button href="#manifesto" variant="secondary">
+              <Button href="#manifesto" variant="ghost">
                 Lees het manifesto
               </Button>
             </div>
@@ -305,24 +297,25 @@ export default function ThinkTenXLanding() {
               </div>
             </Card>
 
-            {/* Card 2: Potential use case */}
+            {/* Card 2: ISO Audit case */}
             <Card
-              icon={MessageSquare}
-              title="Customer Query Classifier"
+              icon={CheckCircle}
+              badge={<Badge variant="filled">✓ GEBOUWD</Badge>}
+              title="ISO Audit Assistant"
               className="shadow-lg"
             >
               <p className="text-sm text-gray-600 mb-3">
-                Retail · E-commerce
+                Services · Klantcontact
               </p>
               <div className="text-lg font-semibold mb-4" style={{ color: colors.primary }}>
-                40% snellere response
+                90 dagen naar certificering
               </div>
               <p className="text-sm text-gray-700 mb-4">
-                Automatische categorisatie van klantvragen naar juiste team,
-                met urgentie detectie en smart routing.
+                AI gedreven tool met geautomatiseerd ISO kwaliteitssysteem.
+                Genereert automatisch procesbewijs tijdens gebruik én levert dit aan tijdens audits.
               </p>
               <div className="text-xs text-gray-500 pt-3 border-t">
-                Potentieel: 15-20 uur/week besparing
+                90% minder audit-voorbereiding · intern én extern
               </div>
             </Card>
 
@@ -586,7 +579,7 @@ export default function ThinkTenXLanding() {
                 </ul>
 
                 <Button href="#contact" fullWidth className="mt-8">
-                  Reserveer early-bird plek
+                  Reserveer plek (Track 1)
                 </Button>
 
                 <div className="mt-6 pt-6 border-t text-center">
@@ -636,7 +629,7 @@ export default function ThinkTenXLanding() {
                 </ul>
 
                 <Button href="#contact" fullWidth className="mt-8">
-                  Start kwalificatiegesprek
+                  Reserveer plek (Track 2)
                 </Button>
 
                 <div className="mt-6 pt-6 border-t text-center">
