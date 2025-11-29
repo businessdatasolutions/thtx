@@ -3,6 +3,7 @@ import { ArrowRight, Users, Target, CheckCircle, XCircle, Menu, X, FileText, Mes
 import { Badge, Button, Card, SectionHeader, FeatureListItem, PricingDisplay, StepIndicator } from './components/shared';
 import { NewsletterModal } from './components/NewsletterModal';
 import { UnsubscribeModal } from './components/UnsubscribeModal';
+import { DoubleLoopDiagram } from './components/DoubleLoopDiagram';
 import { colors } from './styles/design-tokens';
 
 export default function ThinkTenXLanding() {
@@ -127,6 +128,16 @@ export default function ThinkTenXLanding() {
       <section aria-label="Hero" className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center space-y-8">
+            <div
+              className="inline-block px-6 py-3 rounded-full text-base font-bold mb-4 border-2 shadow-lg"
+              style={{
+                backgroundColor: colors.primary,
+                borderColor: colors.primary,
+                color: '#000',
+              }}
+            >
+              AI Solutions Architecture
+            </div>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
               Voor visionairs die<br />
               <span style={{ color: colors.primary }}>10X denken</span>,<br />
@@ -134,8 +145,8 @@ export default function ThinkTenXLanding() {
             </h1>
 
             <p className="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed pt-8">
-              Bouw <strong style={{ color: colors.primary }}>interne AI-capaciteit</strong> die blijft en groeit.<br />
-              Transformeer hoe je organisatie waarde creëert met AI Solutions Architecture.
+              Transformeer hoe jouw organisatie waarde creëert.<br />
+              Bouw <strong style={{ color: colors.primary }}>interne AI-capaciteit</strong> die blijft en groeit.
             </p>
 
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
@@ -215,15 +226,10 @@ export default function ThinkTenXLanding() {
             </Card>
           </div>
 
-          {/* Timeline: How it was built */}
+          {/* Timeline: Double-loop learning */}
           <div className="bg-gray-50 p-6 rounded-xl mb-8">
-            <h4 className="font-semibold mb-4 text-center">Van idee naar werkend systeem</h4>
-            <div className="flex items-center justify-between max-w-3xl mx-auto">
-              <StepIndicator number="1" title="Probleem" subtitle="Week 1-2" />
-              <StepIndicator number="2" title="Prototype" subtitle="Week 3-8" />
-              <StepIndicator number="3" title="Tests" subtitle="Week 9-10" />
-              <StepIndicator number="4" title="Deploy" subtitle="Week 11-12" showArrow={false} />
-            </div>
+            <h4 className="font-semibold mb-4 text-center">Van idee naar werkend systeem naar AI-capabilities</h4>
+            <DoubleLoopDiagram />
           </div>
 
           {/* CTA */}
@@ -303,21 +309,21 @@ export default function ThinkTenXLanding() {
             {/* Card 3: Potential use case */}
             <Card
               icon={TrendingUp}
-              badge={<Badge variant="outline">IDEATION</Badge>}
-              title="ERP Finance Copilot"
+              badge={<Badge variant="filled">✦ IDEATION</Badge>}
+              title="Zorgfinance AI Agent"
               className="shadow-lg"
             >
               <p className="text-sm text-gray-600 mb-3">
                 Finance · Zorg
               </p>
               <div className="text-lg font-semibold mb-4" style={{ color: colors.primary }}>
-                70% minder handwerk
+                Van uitzoeken naar vooruitkijken
               </div>
               <p className="text-sm text-gray-700 mb-4">
-                AI-agent monitort regelgeving, detecteert afwijkingen en genereert automatische boekingen. Finance-team keurt goed, compliance-team reviewt.
+                Zvw, Wlz, Wmo-stromen dagelijks geconsolideerd. AI signaleert afwijkingen en genereert boekingsvoorstellen. Jouw team keurt goed en houdt tijd over voor strategische beslissingen.
               </p>
               <div className="text-xs text-gray-500 pt-3 border-t">
-                Real-time compliance · Cash flow warnings 6 weken vooruit
+                6 weken vooruit kijken · Rust in de financiële planning
               </div>
             </Card>
           </div>
