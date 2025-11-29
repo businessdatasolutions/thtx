@@ -332,6 +332,7 @@ export default function ThinkTenXLanding() {
             {/* Card 3: Potential use case */}
             <Card
               icon={TrendingUp}
+              badge={<Badge variant="outline">IDEATION</Badge>}
               title="ERP Finance Copilot"
               className="shadow-lg"
             >
