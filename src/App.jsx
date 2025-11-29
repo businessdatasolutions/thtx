@@ -778,8 +778,8 @@ export default function ThinkTenXLanding() {
 
               <h4 className="font-bold mb-4 mt-6" id="uitschrijven">Newsletter</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="mailto:hello@thtx.nl?subject=Inschrijven%20newsletter" className="hover:text-white">Inschrijven</a></li>
-                <li><a href="mailto:hello@thtx.nl?subject=Uitschrijven%20newsletter" className="hover:text-white">Uitschrijven</a></li>
+                <li><a href="mailto:hello@thtx.nl?subject=Inschrijven%20newsletter" target="_blank" rel="noopener noreferrer" className="hover:text-white cursor-pointer">Inschrijven</a></li>
+                <li><a href="mailto:hello@thtx.nl?subject=Uitschrijven%20newsletter" target="_blank" rel="noopener noreferrer" className="hover:text-white cursor-pointer">Uitschrijven</a></li>
               </ul>
             </div>
           </div>
