@@ -777,6 +777,18 @@ export default function ThinkTenXLanding() {
               </ul>
             </div>
           </div>
+
+          {/* Uitschrijven sectie */}
+          <div id="uitschrijven" className="border-t border-gray-800 pt-8 mb-8">
+            <h4 className="font-bold mb-4 text-center">Newsletter uitschrijven</h4>
+            <p className="text-gray-400 text-center text-sm mb-4">
+              Wil je geen updates meer ontvangen? Stuur een mail naar{' '}
+              <a href="mailto:hello@thtx.nl?subject=Uitschrijven%20newsletter" className="underline hover:text-white">
+                hello@thtx.nl
+              </a>{' '}
+              met als onderwerp "Uitschrijven newsletter".
+            </p>
+          </div>
           
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
             <p>&copy; 2025 THTX.nl - Voor leiders die transformeren, niet optimaliseren.</p>

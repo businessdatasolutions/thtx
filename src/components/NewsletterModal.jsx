@@ -73,9 +73,24 @@ export function NewsletterModal({ isOpen, onClose }) {
             <h3 className="text-2xl font-bold mb-4">
               Blijf op de hoogte
             </h3>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 mb-4">
               Ontvang wekelijks inzichten over 10X denken en AI-transformatie.
               Geen spam, alleen waardevolle content.
+            </p>
+            <p className="text-gray-500 text-sm mb-6">
+              Je kunt je altijd{' '}
+              <a
+                href="#uitschrijven"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleClose();
+                  document.getElementById('uitschrijven')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="underline hover:text-gray-700"
+              >
+                uitschrijven
+              </a>
+              .
             </p>
             <form onSubmit={handleSubmit} className="space-y-4">
               <input
