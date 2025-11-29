@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Users, Target, CheckCircle, XCircle, Menu, X, FileText, MessageSquare, Package, TrendingUp, AlertCircle, Lightbulb, Zap } from 'lucide-react';
+import { ArrowRight, Users, Target, CheckCircle, XCircle, Menu, X, FileText, MessageSquare, TrendingUp, AlertCircle, Lightbulb } from 'lucide-react';
 import { Badge, Button, Card, SectionHeader, FeatureListItem, PricingDisplay, StepIndicator } from './components/shared';
 import { NewsletterModal } from './components/NewsletterModal';
 import { UnsubscribeModal } from './components/UnsubscribeModal';
@@ -331,22 +331,21 @@ export default function ThinkTenXLanding() {
 
             {/* Card 3: Potential use case */}
             <Card
-              icon={Package}
-              title="Supply Chain Forecast AI"
+              icon={TrendingUp}
+              title="ERP Finance Copilot"
               className="shadow-lg"
             >
               <p className="text-sm text-gray-600 mb-3">
-                Logistics · Distribution
+                Finance · Zorg
               </p>
               <div className="text-lg font-semibold mb-4" style={{ color: colors.primary }}>
-                25% betere accuracy
+                70% minder handwerk
               </div>
               <p className="text-sm text-gray-700 mb-4">
-                Planning assistent die leert van historische data,
-                seizoenpatronen, en externe factoren.
+                AI-agent monitort regelgeving, detecteert afwijkingen en genereert automatische boekingen. Finance-team keurt goed, compliance-team reviewt.
               </p>
               <div className="text-xs text-gray-500 pt-3 border-t">
-                Potentieel: €50K+ inventory savings
+                Real-time compliance · Cash flow warnings 6 weken vooruit
               </div>
             </Card>
           </div>
