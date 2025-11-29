@@ -31,7 +31,7 @@ export function NewsletterModal({ isOpen, onClose }) {
 
     try {
       // Submit to Formspree newsletter endpoint
-      await fetch('https://formspree.io/f/xyzyvzpn', {
+      await fetch('https://formspree.io/f/xnnlaano', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
