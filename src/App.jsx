@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Users, Target, CheckCircle, XCircle, Menu, X, FileText, MessageSquare, Package, TrendingUp, AlertCircle, Lightbulb, Zap } from 'lucide-react';
 import { Badge, Button, Card, SectionHeader, FeatureListItem, PricingDisplay, StepIndicator } from './components/shared';
+import { NewsletterModal } from './components/NewsletterModal';
 import { colors } from './styles/design-tokens';
 
 export default function ThinkTenXLanding() {
@@ -10,6 +11,7 @@ export default function ThinkTenXLanding() {
   const [showContactModal, setShowContactModal] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showNewsletterModal, setShowNewsletterModal] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -395,26 +397,28 @@ export default function ThinkTenXLanding() {
         </div>
       </section>
 
-      {/* Not For You Section */}
+      {/* Not For You Section - Nurture Path */}
       {selectedAnswer === '10percent' && (
-        <section id="not-for-you" className="py-20 px-4 sm:px-6 lg:px-8 border-t-4" style={{ backgroundColor: colors.bg.pink, borderColor: colors.accent.pink }}>
+        <section id="not-for-you" className="py-20 px-4 sm:px-6 lg:px-8 border-t-4" style={{ backgroundColor: colors.bg.blue1, borderColor: colors.primary }}>
           <div className="max-w-4xl mx-auto text-center">
-            <XCircle className="w-16 h-16 mx-auto mb-6" style={{ color: colors.accent.pink }} />
-            <h2 className="text-4xl font-bold mb-6">We zijn niet de juiste fit</h2>
+            <Lightbulb className="w-16 h-16 mx-auto mb-6" style={{ color: colors.primary }} />
+            <h2 className="text-4xl font-bold mb-6">Blijf op de hoogte van 10X denken</h2>
             <p className="text-xl text-gray-700 mb-6">
-              Er is niks mis met incrementele verbetering zoeken — maar wij specialiseren ons in radicale transformatie.<br />
-              We zijn liever eerlijk dan je tijd verspillen.
+              Wij specialiseren in radicale transformatie — dat past niet bij elke organisatie op elk moment.<br />
+              Maar ideeën over 10X denken kunnen altijd inspireren.
             </p>
             <p className="text-lg text-gray-600 mb-8">
-              We raden aan om traditionele consultancy-bureaus of optimalisatie-gerichte trainingen te verkennen.<br />
-              Als je klaar bent om te bouwen, zijn we er.
+              Wil je meer leren over hoe organisaties fundamenteel anders gaan werken met AI?<br />
+              Schrijf je in voor onze nieuwsbrief.
             </p>
-            <button
-              onClick={() => setSelectedAnswer(null)}
-              className="px-6 py-3 bg-gray-200 rounded-lg hover:bg-gray-300 transition"
-            >
-              Doe de quiz opnieuw
-            </button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button onClick={() => setShowNewsletterModal(true)}>
+                Schrijf je in voor de nieuwsbrief
+              </Button>
+              <Button href="#manifesto" variant="ghost">
+                Lees ons manifesto
+              </Button>
+            </div>
           </div>
         </section>
       )}
@@ -910,6 +914,12 @@ export default function ThinkTenXLanding() {
           </div>
         </div>
       )}
+
+      {/* Newsletter Modal */}
+      <NewsletterModal
+        isOpen={showNewsletterModal}
+        onClose={() => setShowNewsletterModal(false)}
+      />
     </div>
   );
 }
