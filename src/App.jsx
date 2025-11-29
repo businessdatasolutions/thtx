@@ -298,7 +298,7 @@ export default function ThinkTenXLanding() {
                 90%+ tijd besparing
               </div>
               <p className="text-sm text-gray-700 mb-4">
-                Van 2 uur zoeken in technische PDFs naar 3 minuten met semantic search. Next: koppeling aan AI-assistent.
+                Van 2 uur zoeken in technische PDFs naar 3 minuten met AI-samenvatting en semantic search. Volgende stap: koppeling aan AI-assistent.
               </p>
               <div className="text-xs text-gray-500 pt-3 border-t">
                 Experiment voor een machinebouwer<br />
