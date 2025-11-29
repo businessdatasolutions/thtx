@@ -15,10 +15,16 @@ export default function ThinkTenXLanding() {
   const [showNewsletterModal, setShowNewsletterModal] = useState(false);
   const [newsletterSource, setNewsletterSource] = useState('');
   const [showUnsubscribeModal, setShowUnsubscribeModal] = useState(false);
+  const [contactSource, setContactSource] = useState('');
 
   const openNewsletterModal = (source) => {
     setNewsletterSource(source);
     setShowNewsletterModal(true);
+  };
+
+  const openContactModal = (source) => {
+    setContactSource(source);
+    setShowContactModal(true);
   };
 
   useEffect(() => {
@@ -43,6 +49,7 @@ export default function ThinkTenXLanding() {
     setIsSubmitting(true);
 
     const formData = new FormData(e.target);
+    formData.append('source', contactSource);
 
     try {
       const response = await fetch('https://formspree.io/f/xnnlaano', {
@@ -85,7 +92,7 @@ export default function ThinkTenXLanding() {
               <a href="#example" className="text-gray-700 hover:text-gray-900 transition">Voorbeeld</a>
               <a href="#manifesto" className="text-gray-700 hover:text-gray-900 transition">Manifesto</a>
               <a href="#tracks" className="text-gray-700 hover:text-gray-900 transition">Programma's</a>
-              <Button href="#contact" size="sm">
+              <Button onClick={() => openContactModal('nav_desktop')} size="sm">
                 Reserveer plek
               </Button>
             </div>
@@ -108,7 +115,7 @@ export default function ThinkTenXLanding() {
               <a href="#example" className="block text-gray-700 hover:text-gray-900">Voorbeeld</a>
               <a href="#manifesto" className="block text-gray-700 hover:text-gray-900">Manifesto</a>
               <a href="#tracks" className="block text-gray-700 hover:text-gray-900">Programma's</a>
-              <Button href="#contact" fullWidth>
+              <Button onClick={() => { openContactModal('nav_mobile'); setMobileMenuOpen(false); }} fullWidth>
                 Reserveer plek
               </Button>
             </div>
@@ -140,7 +147,7 @@ export default function ThinkTenXLanding() {
               <Button href="#example" icon={ArrowRight}>
                 Ontdek wat mogelijk is
               </Button>
-              <Button href="#manifesto" variant="ghost">
+              <Button href="#manifesto" variant="secondary">
                 Lees het manifesto
               </Button>
             </div>
@@ -231,41 +238,6 @@ export default function ThinkTenXLanding() {
             <Button href="#possibilities" icon={ArrowRight}>
               Ontdek meer mogelijkheden
             </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* The AIR Problem */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-                Je hebt HR,<br />
-                maar geen <span style={{ color: colors.primary }}>AIR</span>?
-              </h2>
-              <p className="text-xl leading-relaxed text-gray-300">
-                Elke organisatie heeft Human Resources om mensen te managen.<br />
-                Maar wie managet jouw <strong style={{ color: colors.primary }}>AI Resources</strong>?
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              <div className="bg-gray-800 p-6 rounded-xl">
-                <h3 className="text-xl font-bold mb-2" style={{ color: colors.primary }}>De kans</h3>
-                <p className="text-gray-300">Bedrijven met IT en business op één lijn zijn 72% winstgevender en groeien 58% sneller. Die afstemming? Die kun je bouwen.</p>
-              </div>
-
-              <div className="bg-gray-800 p-6 rounded-xl">
-                <h3 className="text-xl font-bold mb-2" style={{ color: colors.primary }}>Wat we bouwen</h3>
-                <p className="text-gray-300">Interne AI Resources die de IT-business kloof overbruggen en transformatie-eigenaarschap creëren. Capaciteiten die duurzaam gevestigd zijn en organisch groeien.</p>
-              </div>
-
-              <div className="bg-gray-800 p-6 rounded-xl">
-                <h3 className="text-xl font-bold mb-2" style={{ color: colors.primary }}>Hoe we bouwen</h3>
-                <p className="text-gray-300">Samen. Cross-industrieel. 2 junior professionals gratis per workshop. Want beweging krijg je door verbinding, versnelling en ruimte.</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -397,7 +369,7 @@ export default function ThinkTenXLanding() {
                 style={selectedAnswer === '10x' ? { borderColor: colors.primary, backgroundColor: colors.bg.yellow } : {}}
               >
                 <h3 className="text-xl font-bold mb-3">Iets radicaal<br />anders en 10X beter</h3>
-                <p className="text-gray-600">Businessmodellen transformeren, waardeproposities herdenken, revolutionair veranderen</p>
+                <p className="text-gray-600">Nieuwe business modellen, disruptieve waardeproposities, AI-leider binnen jouw sector</p>
               </button>
             </div>
           </div>
@@ -418,14 +390,9 @@ export default function ThinkTenXLanding() {
               Wil je meer leren over hoe organisaties fundamenteel anders gaan werken met AI?<br />
               Schrijf je in voor onze nieuwsbrief.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button onClick={() => openNewsletterModal('quiz_nurture')}>
-                Schrijf je in voor de nieuwsbrief
-              </Button>
-              <Button href="#manifesto" variant="ghost">
-                Lees ons manifesto
-              </Button>
-            </div>
+            <Button onClick={() => openNewsletterModal('quiz_nurture')}>
+              Schrijf je in voor de nieuwsbrief
+            </Button>
           </div>
         </section>
       )}
@@ -508,7 +475,7 @@ export default function ThinkTenXLanding() {
       {/* How It Works */}
       <section id="how-it-works" aria-label="Hoe het werkt" className="py-20 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: colors.bg.blue2 }}>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16">Hoe de beweging werkt</h2>
+          <h2 className="text-4xl font-bold text-center mb-16">Hoe THTX werkt</h2>
 
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="shadow-lg">
@@ -589,18 +556,11 @@ export default function ThinkTenXLanding() {
                   <FeatureListItem>Doorlopende toegang tot professionele community</FeatureListItem>
                 </ul>
 
-                <Button href="#contact" fullWidth className="mt-8">
+                <Button onClick={() => openContactModal('track_1')} fullWidth className="mt-8">
                   Reserveer plek (Track 1)
                 </Button>
 
-                <div className="mt-6 pt-6 border-t text-center">
-                  <p className="text-sm font-semibold mb-2">Launch Garantie</p>
-                  <p className="text-xs text-gray-600">
-                    Niet tevreden na dag 1? Volledige refund.<br />
-                    Geen werkende oplossing in 90 dagen? Volgende workshop gratis.
-                  </p>
-                </div>
-              </div>
+                              </div>
             </div>
 
             {/* Track 2 */}
@@ -639,17 +599,9 @@ export default function ThinkTenXLanding() {
                   <FeatureListItem>Focus op businessmodel-innovatie</FeatureListItem>
                 </ul>
 
-                <Button href="#contact" fullWidth className="mt-8">
+                <Button onClick={() => openContactModal('track_2')} fullWidth className="mt-8">
                   Reserveer plek (Track 2)
                 </Button>
-
-                <div className="mt-6 pt-6 border-t text-center">
-                  <p className="text-sm font-semibold mb-2">Launch Garantie</p>
-                  <p className="text-xs text-gray-600">
-                    Niet tevreden na dag 1? Volledige refund.<br />
-                    Geen werkende oplossing in 90 dagen? Volgende programma gratis.
-                  </p>
-                </div>
               </div>
             </div>
           </div>
@@ -690,7 +642,7 @@ export default function ThinkTenXLanding() {
               </ul>
 
               <div className="mt-6 pt-6 border-t">
-                <Button href="#tracks" fullWidth>
+                <Button onClick={() => openContactModal('quiz_ready')} fullWidth>
                   Ja, ik ben klaar om te bouwen →
                 </Button>
               </div>
@@ -738,12 +690,12 @@ export default function ThinkTenXLanding() {
           </h2>
 
           <p className="text-xl text-gray-600 mb-12">
-            Word één van de eersten. Sluit je aan bij de lancering in februari 2026.
+            We starten in februari 2026 met de nieuwe ronde. Meld je aan of neem contact met ons op voor meer informatie.
           </p>
 
           <div className="space-y-6">
             <Button
-              onClick={() => setShowContactModal(true)}
+              onClick={() => openContactModal('cta_section')}
               size="lg"
               className="text-xl shadow-lg"
             >
@@ -780,7 +732,7 @@ export default function ThinkTenXLanding() {
             <div>
               <h4 className="font-bold mb-4">Connect</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><button onClick={() => setShowContactModal(true)} className="hover:text-white cursor-pointer">hello@thtx.nl</button></li>
+                <li><button onClick={() => openContactModal('footer')} className="hover:text-white cursor-pointer">hello@thtx.nl</button></li>
               </ul>
 
               <h4 className="font-bold mb-4 mt-6" id="uitschrijven">Newsletter</h4>

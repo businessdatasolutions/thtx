@@ -421,3 +421,21 @@ export const AccessibilityTest = {
     },
   },
 };
+
+// Newsletter nurture button
+export const NewsletterNurture = {
+  args: {
+    children: 'Nog niet zeker - blijf me updaten',
+    variant: 'secondary',
+    size: 'md',
+    fullWidth: true,
+  },
+  parameters: {
+    layout: 'padded',
+    docs: {
+      description: {
+        story: 'Secondary full-width button used for newsletter signup nurture flow',
+      },
+    },
+  },
+};
