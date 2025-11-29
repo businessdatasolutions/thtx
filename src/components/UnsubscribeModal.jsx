@@ -3,7 +3,7 @@ import { X } from 'lucide-react';
 import { Button } from './shared/Button';
 import { colors } from '../styles/design-tokens';
 
-export function NewsletterModal({ isOpen, onClose, onUnsubscribe }) {
+export function UnsubscribeModal({ isOpen, onClose }) {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -30,19 +30,19 @@ export function NewsletterModal({ isOpen, onClose, onUnsubscribe }) {
     setIsSubmitting(true);
 
     try {
-      // Submit to Formspree newsletter endpoint
+      // Submit to Formspree endpoint
       await fetch('https://formspree.io/f/xnnlaano', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           email,
-          type: 'newsletter',
-          source: 'quiz_nurture'
+          type: 'unsubscribe',
+          source: 'footer'
         })
       });
       setSubmitted(true);
     } catch (error) {
-      console.error('Newsletter signup error:', error);
+      console.error('Unsubscribe error:', error);
     } finally {
       setIsSubmitting(false);
     }
@@ -71,25 +71,10 @@ export function NewsletterModal({ isOpen, onClose, onUnsubscribe }) {
         {!submitted ? (
           <>
             <h3 className="text-2xl font-bold mb-4">
-              Blijf op de hoogte
+              Uitschrijven
             </h3>
-            <p className="text-gray-600 mb-4">
-              Ontvang wekelijks inzichten over 10X denken en AI-transformatie.
-              Geen spam, alleen waardevolle content.
-            </p>
-            <p className="text-gray-500 text-sm mb-6">
-              Je kunt je altijd{' '}
-              <button
-                type="button"
-                onClick={() => {
-                  handleClose();
-                  if (onUnsubscribe) onUnsubscribe();
-                }}
-                className="underline hover:text-gray-700"
-              >
-                uitschrijven
-              </button>
-              .
+            <p className="text-gray-600 mb-6">
+              Jammer dat je gaat! Vul je e-mailadres in om je uit te schrijven van de newsletter.
             </p>
             <form onSubmit={handleSubmit} className="space-y-4">
               <input
@@ -105,8 +90,8 @@ export function NewsletterModal({ isOpen, onClose, onUnsubscribe }) {
                 onFocus={(e) => e.target.style.borderColor = colors.primary}
                 onBlur={(e) => e.target.style.borderColor = '#d1d5db'}
               />
-              <Button type="submit" fullWidth disabled={isSubmitting}>
-                {isSubmitting ? 'Bezig...' : 'Schrijf me in'}
+              <Button type="submit" fullWidth variant="secondary" disabled={isSubmitting}>
+                {isSubmitting ? 'Bezig...' : 'Schrijf me uit'}
               </Button>
             </form>
           </>
@@ -119,10 +104,10 @@ export function NewsletterModal({ isOpen, onClose, onUnsubscribe }) {
               <span className="text-3xl">✓</span>
             </div>
             <h3 className="text-2xl font-bold mb-4 text-center">
-              Bedankt!
+              Uitgeschreven
             </h3>
             <p className="text-gray-600 mb-6 text-center">
-              Je bent ingeschreven. We houden je op de hoogte van 10X denken en AI-transformatie.
+              Je bent uitgeschreven van de newsletter. Je ontvangt geen e-mails meer van ons.
             </p>
             <Button onClick={handleClose} fullWidth variant="ghost">
               Sluiten

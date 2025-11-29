@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ArrowRight, Users, Target, CheckCircle, XCircle, Menu, X, FileText, MessageSquare, Package, TrendingUp, AlertCircle, Lightbulb, Zap } from 'lucide-react';
 import { Badge, Button, Card, SectionHeader, FeatureListItem, PricingDisplay, StepIndicator } from './components/shared';
 import { NewsletterModal } from './components/NewsletterModal';
+import { UnsubscribeModal } from './components/UnsubscribeModal';
 import { colors } from './styles/design-tokens';
 
 export default function ThinkTenXLanding() {
@@ -12,6 +13,7 @@ export default function ThinkTenXLanding() {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showNewsletterModal, setShowNewsletterModal] = useState(false);
+  const [showUnsubscribeModal, setShowUnsubscribeModal] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -778,8 +780,8 @@ export default function ThinkTenXLanding() {
 
               <h4 className="font-bold mb-4 mt-6" id="uitschrijven">Newsletter</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="mailto:hello@thtx.nl?subject=Inschrijven%20newsletter" target="_blank" rel="noopener noreferrer" className="hover:text-white cursor-pointer">Inschrijven</a></li>
-                <li><a href="mailto:hello@thtx.nl?subject=Uitschrijven%20newsletter" target="_blank" rel="noopener noreferrer" className="hover:text-white cursor-pointer">Uitschrijven</a></li>
+                <li><button onClick={() => setShowNewsletterModal(true)} className="hover:text-white cursor-pointer">Inschrijven</button></li>
+                <li><button onClick={() => setShowUnsubscribeModal(true)} className="hover:text-white cursor-pointer">Uitschrijven</button></li>
               </ul>
             </div>
           </div>
@@ -925,6 +927,13 @@ export default function ThinkTenXLanding() {
       <NewsletterModal
         isOpen={showNewsletterModal}
         onClose={() => setShowNewsletterModal(false)}
+        onUnsubscribe={() => setShowUnsubscribeModal(true)}
+      />
+
+      {/* Unsubscribe Modal */}
+      <UnsubscribeModal
+        isOpen={showUnsubscribeModal}
+        onClose={() => setShowUnsubscribeModal(false)}
       />
     </div>
   );
