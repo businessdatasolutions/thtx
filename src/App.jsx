@@ -13,7 +13,13 @@ export default function ThinkTenXLanding() {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showNewsletterModal, setShowNewsletterModal] = useState(false);
+  const [newsletterSource, setNewsletterSource] = useState('');
   const [showUnsubscribeModal, setShowUnsubscribeModal] = useState(false);
+
+  const openNewsletterModal = (source) => {
+    setNewsletterSource(source);
+    setShowNewsletterModal(true);
+  };
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -414,7 +420,7 @@ export default function ThinkTenXLanding() {
               Schrijf je in voor onze nieuwsbrief.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button onClick={() => setShowNewsletterModal(true)}>
+              <Button onClick={() => openNewsletterModal('quiz_nurture')}>
                 Schrijf je in voor de nieuwsbrief
               </Button>
               <Button href="#manifesto" variant="ghost">
@@ -716,7 +722,7 @@ export default function ThinkTenXLanding() {
               </ul>
 
               <div className="mt-6 pt-6 border-t">
-                <Button onClick={() => setShowNewsletterModal(true)} variant="secondary" fullWidth>
+                <Button onClick={() => openNewsletterModal('not_for_you')} variant="secondary" fullWidth>
                   Nog niet zeker - blijf me updaten
                 </Button>
               </div>
@@ -780,7 +786,7 @@ export default function ThinkTenXLanding() {
 
               <h4 className="font-bold mb-4 mt-6" id="uitschrijven">Newsletter</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><button onClick={() => setShowNewsletterModal(true)} className="hover:text-white cursor-pointer">Inschrijven</button></li>
+                <li><button onClick={() => openNewsletterModal('footer')} className="hover:text-white cursor-pointer">Inschrijven</button></li>
                 <li><button onClick={() => setShowUnsubscribeModal(true)} className="hover:text-white cursor-pointer">Uitschrijven</button></li>
               </ul>
             </div>
@@ -928,6 +934,7 @@ export default function ThinkTenXLanding() {
         isOpen={showNewsletterModal}
         onClose={() => setShowNewsletterModal(false)}
         onUnsubscribe={() => setShowUnsubscribeModal(true)}
+        source={newsletterSource}
       />
 
       {/* Unsubscribe Modal */}

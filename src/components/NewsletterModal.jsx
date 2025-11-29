@@ -3,7 +3,7 @@ import { X } from 'lucide-react';
 import { Button } from './shared/Button';
 import { colors } from '../styles/design-tokens';
 
-export function NewsletterModal({ isOpen, onClose, onUnsubscribe }) {
+export function NewsletterModal({ isOpen, onClose, onUnsubscribe, source = 'unknown' }) {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -37,7 +37,7 @@ export function NewsletterModal({ isOpen, onClose, onUnsubscribe }) {
         body: JSON.stringify({
           email,
           type: 'newsletter',
-          source: 'quiz_nurture'
+          source
         })
       });
       setSubmitted(true);
