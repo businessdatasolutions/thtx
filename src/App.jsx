@@ -214,8 +214,8 @@ export default function ThinkTenXLanding() {
           {/* CTA */}
           <div className="text-center">
             <p className="text-gray-600 mb-4">
-              Dit is hoe <strong>AI Solutions Architects</strong> werken:<br />
-              Niet consultants die opleveringen, maar professionals die capaciteit bouwen.
+              Zo werken <strong>AI Solutions Architects</strong>:<br />
+              Niet adviseren en vertrekken. Maar bouwen en borgen.
             </p>
             <p className="text-sm text-gray-500 mb-6">
               Wat zou <strong>jouw</strong> organisatie kunnen bouwen met deze aanpak?
