@@ -299,7 +299,7 @@ export default function ThinkTenXLanding() {
               </div>
               <p className="text-sm text-gray-700 mb-4">
                 Van 2 uur zoeken in technische PDFs naar 3 minuten vinden
-                met AI samenvatting en intelligent search.
+                met AI samenvatting en intelligent search. Volgende fase: koppeling aan AI assistent voor beantwoorden van klantvragen.
               </p>
               <div className="text-xs text-gray-500 pt-3 border-t">
                 Experiment voor een machinebouwer<br />
