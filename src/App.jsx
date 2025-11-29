@@ -775,19 +775,13 @@ export default function ThinkTenXLanding() {
               <ul className="space-y-2 text-gray-400">
                 <li><button onClick={() => setShowContactModal(true)} className="hover:text-white cursor-pointer">hello@thtx.nl</button></li>
               </ul>
-            </div>
-          </div>
 
-          {/* Uitschrijven sectie */}
-          <div id="uitschrijven" className="border-t border-gray-800 pt-8 mb-8">
-            <h4 className="font-bold mb-4 text-center">Newsletter uitschrijven</h4>
-            <p className="text-gray-400 text-center text-sm mb-4">
-              Wil je geen updates meer ontvangen? Stuur een mail naar{' '}
-              <a href="mailto:hello@thtx.nl?subject=Uitschrijven%20newsletter" className="underline hover:text-white">
-                hello@thtx.nl
-              </a>{' '}
-              met als onderwerp "Uitschrijven newsletter".
-            </p>
+              <h4 className="font-bold mb-4 mt-6" id="uitschrijven">Newsletter</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><a href="mailto:hello@thtx.nl?subject=Inschrijven%20newsletter" className="hover:text-white">Inschrijven</a></li>
+                <li><a href="mailto:hello@thtx.nl?subject=Uitschrijven%20newsletter" className="hover:text-white">Uitschrijven</a></li>
+              </ul>
+            </div>
           </div>
           
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
