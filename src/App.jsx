@@ -716,7 +716,7 @@ export default function ThinkTenXLanding() {
               </ul>
 
               <div className="mt-6 pt-6 border-t">
-                <Button href="#contact" variant="secondary" fullWidth>
+                <Button onClick={() => setShowNewsletterModal(true)} variant="secondary" fullWidth>
                   Nog niet zeker - blijf me updaten
                 </Button>
               </div>
