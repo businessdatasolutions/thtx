@@ -1,19 +1,31 @@
-// THTX Design System - Design Tokens
-// Centralized design values for consistent styling across components
+// BDS Design System - Design Tokens
+// Centralized design values for consistent styling across components.
+//
+// 2026-05-19: Palette refactor naar "Strict minimal" (Optie C).
+// Geel + warm zwart + warme grijzen. Pink en cyan zijn verwijderd uit
+// het publieke design — de oude key-namen (accent.pink, accent.cyan,
+// bg.pink, bg.cyan, bg.blue1, bg.blue2) blijven bestaan als aliassen
+// voor backward compat, maar verwijzen nu naar monochrome equivalenten.
+// Kleine technische schuld: in een volgende refactor hernoemen we deze
+// keys naar semantische namen (supporting, muted, cream).
 
 // Color palette
 export const colors = {
-  primary: '#d4db3e',
+  primary: '#d4db3e',           // chartreuse-geel — signaal-accent
+  supporting: '#1a1a1a',        // warm zwart — tweede merk-kleur
+  cream: '#f5f0e6',             // warme neutrale tint
+
+  // Legacy aliases — verwijzen naar het nieuwe palet
   accent: {
-    pink: '#ff6984',
-    cyan: '#00d1ff',
+    pink: '#1a1a1a',            // was #ff6984 — nu warm zwart
+    cyan: '#6b7280',            // was #00d1ff — nu muted gray
   },
   bg: {
-    blue1: '#def0fa',
-    blue2: '#dcebf3',
-    yellow: '#fafbf0',
-    pink: '#fff5f7',
-    cyan: '#f0fbff',
+    blue1: '#f5f0e6',           // was #def0fa — nu cream
+    blue2: '#f0ebe0',           // was #dcebf3 — nu donkere cream
+    yellow: '#fafbf0',           // ongewijzigd
+    pink: '#f9f8f4',            // was #fff5f7 — nu off-white
+    cyan: '#f9f9f7',            // was #f0fbff — nu off-white
   },
 };
 
