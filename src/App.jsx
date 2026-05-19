@@ -84,9 +84,8 @@ export default function ThinkTenXLanding() {
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="flex items-center space-x-2 cursor-pointer hover:opacity-80 transition"
             >
-              <img src="/logo.png" alt="THTX Logo" className="w-8 h-8" />
-              <span className="text-2xl font-bold">THTX</span>
-              <span className="text-sm text-gray-500 hidden sm:inline">.nl</span>
+              <img src="/logo.png" alt="Business Data Solutions Logo" className="w-8 h-8" />
+              <span className="text-2xl font-bold">Business Data Solutions</span>
             </button>
             
             <div className="hidden md:flex space-x-8 items-center">
@@ -136,32 +135,31 @@ export default function ThinkTenXLanding() {
                 color: '#000',
               }}
             >
-              AI Solutions Architecture
+              AI engineer voor het MKB
             </div>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
-              Voor visionairs die<br />
-              <span style={{ color: colors.primary }}>10X denken</span>,<br />
-              niet 10%
+              AI-oplossingen die<br />
+              <span style={{ color: colors.primary }}>voor jou werken</span>
             </h1>
 
             <p className="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed pt-8">
-              Transformeer hoe jouw organisatie waarde creëert.<br />
-              Bouw <strong style={{ color: colors.primary }}>interne AI-capaciteit</strong> die blijft en groeit.
-            </p>
-
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              In <strong style={{ color: colors.primary }}>90 dagen</strong>: van idee naar werkende oplossing.<br />
-              Cross-industrieel. Collaboratief. Capaciteiten die zich vermenigvuldigen.
+              Van idee naar werkend product in <strong style={{ color: colors.primary }}>6 weken</strong>.<br />
+              Ik werk naast jouw team totdat het systeem doet wat we hebben bedacht.<br />
+              En je betaalt voor de afgesproken uitkomst, niet voor mijn uren.
             </p>
 
             <div className="pt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="#example" icon={ArrowRight}>
-                Ontdek wat mogelijk is
+              <Button onClick={() => openContactModal('hero')} icon={ArrowRight}>
+                Plan een gratis intake
               </Button>
-              <Button href="#manifesto" variant="secondary">
-                Lees het manifesto
+              <Button href="#example" variant="secondary">
+                Bekijk recent werk
               </Button>
             </div>
+
+            <p className="text-sm text-gray-500 pt-4">
+              Ravenstein-Nijmegen · werkt heel NL · binnen 3 dagen reactie
+            </p>
           </div>
         </div>
       </section>
@@ -517,111 +515,255 @@ export default function ThinkTenXLanding() {
         </div>
       </section>
 
-      {/* Two Tracks */}
-      <section id="tracks" aria-label="Programma's en tracks" className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
+      {/* Three Programs */}
+      <section id="tracks" aria-label="Programma's" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <SectionHeader
-            title="Twee paden naar transformatie"
-            subtitle="Individuele professionele ontwikkeling of volledige organisatietransformatie"
+            title="Drie programma's, drie tempo's"
+            subtitle="Van eerste roadmap tot werkende oplossing — kies het programma dat past bij waar je nu staat."
           />
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Track 1 */}
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2" style={{ borderColor: colors.primary }}>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Programma 1 — AI Quick Scan */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 flex flex-col" style={{ borderColor: colors.primary }}>
               <div className="p-8" style={{ backgroundColor: colors.bg.blue1 }}>
-                <div className="flex items-center justify-between mb-4">
-                  <Users className="w-12 h-12" />
-                  <Badge variant="filled">Early-bird: -30%</Badge>
-                </div>
-                <h3 className="text-3xl font-bold mb-2">Track 1</h3>
-                <p className="text-xl font-semibold mb-4">Professionele ontwikkelingsworkshops</p>
-                <PricingDisplay
-                  price="€1.750"
-                  originalPrice="€2.500"
-                  className="mb-2"
-                />
-                <div className="text-gray-600 mb-2">per persoon · early-bird</div>
-                <div className="text-sm font-semibold" style={{ color: colors.primary }}>
-                  Eerste workshop: Februari 2026
-                </div>
-                <div className="text-xs text-gray-600">
-                  6 professionals + 2 junior (gratis)
-                </div>
+                <FileText className="w-12 h-12 mb-4" />
+                <h3 className="text-2xl font-bold mb-2">AI Quick Scan</h3>
+                <p className="text-base font-semibold text-gray-700 mb-4">
+                  Een week. Een roadmap. Beslissingen op tafel.
+                </p>
+                <PricingDisplay price="€2.500" className="mb-1" />
+                <div className="text-sm text-gray-600">vanaf · excl. BTW</div>
               </div>
 
-              <div className="p-8 space-y-4">
-                <p className="text-lg mb-6">
-                  Maandelijkse 2-daagse intensieve workshops met 5-6 professionals uit verschillende organisaties.
+              <div className="p-8 space-y-4 flex flex-col flex-1">
+                <p className="text-base text-gray-700">
+                  Voor MKB-directeuren die weten dat ze iets met AI moeten, maar niet weten waar te beginnen. In 5 werkdagen leveren we een prio-matrix, een 90-dagen roadmap en een go/no-go per use case. Klaar voor je MT-vergadering.
                 </p>
 
-                <ul className="space-y-3">
-                  <FeatureListItem>Cross-company samenwerking & peer learning</FeatureListItem>
-                  <FeatureListItem>Los echte werkuitdagingen op met 10X-denken</FeatureListItem>
-                  <FeatureListItem>Implementeer werkende oplossingen in 45 dagen</FeatureListItem>
-                  <FeatureListItem>AI Solutions Architect certificeringstraject</FeatureListItem>
-                  <FeatureListItem>Doorlopende toegang tot professionele community</FeatureListItem>
+                <div className="text-sm font-semibold text-gray-900 mt-4">Wat je krijgt:</div>
+                <ul className="space-y-2">
+                  <FeatureListItem>Roadmap document (12-15 pagina's)</FeatureListItem>
+                  <FeatureListItem>Prio-matrix (impact × inspanning)</FeatureListItem>
+                  <FeatureListItem>2 uur terugkoppeling met directie</FeatureListItem>
                 </ul>
 
-                <Button onClick={() => openContactModal('track_1')} fullWidth className="mt-8">
-                  Reserveer plek (Track 1)
+                <Button onClick={() => openContactModal('quick_scan')} fullWidth className="mt-auto">
+                  Plan een intake
                 </Button>
-
-                              </div>
+              </div>
             </div>
 
-            {/* Track 2 */}
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2" style={{ borderColor: colors.primary }}>
-              <div className="p-8" style={{ backgroundColor: colors.bg.blue2 }}>
-                <div className="flex items-center justify-between mb-4">
-                  <Target className="w-12 h-12" />
-                  <Badge variant="filled">Early-bird: -30%</Badge>
-                </div>
-                <h3 className="text-3xl font-bold mb-2">Track 2</h3>
-                <p className="text-xl font-semibold mb-4">Organisatietransformatie</p>
+            {/* Programma 2 — 90-Day AI Capability */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 flex flex-col" style={{ borderColor: colors.primary }}>
+              <div className="p-8" style={{ backgroundColor: colors.bg.yellow }}>
+                <Users className="w-12 h-12 mb-4" />
+                <h3 className="text-2xl font-bold mb-2">90-Day AI Capability</h3>
+                <p className="text-base font-semibold text-gray-700 mb-4">
+                  Negentig dagen. Eén team. Een werkende oplossing.
+                </p>
                 <PricingDisplay
-                  price="€17.500"
-                  originalPrice="€25.000"
-                  className="mb-2"
+                  price="€7.500"
+                  originalPrice="€15.000"
+                  className="mb-1"
                 />
-                <div className="text-gray-600 mb-2">per organisatie · early-bird</div>
-                <div className="text-sm font-semibold" style={{ color: colors.primary }}>
-                  Start: Maart 2026
-                </div>
-                <div className="text-xs text-gray-600">
-                  8-12 participants per cohort
-                </div>
+                <div className="text-sm text-gray-600">Founding Cohort · excl. BTW</div>
               </div>
 
-              <div className="p-8 space-y-4">
-                <p className="text-lg mb-6">
-                  Intensieve programma's met volledige teams uit individuele bedrijven, gericht op businessmodel-innovatie.
+              <div className="p-8 space-y-4 flex flex-col flex-1">
+                <p className="text-base text-gray-700">
+                  Voor organisaties die niet alleen een tool willen, maar een team dat AI begrijpt en kan onderhouden. Drie maanden begeleiding waarin je team van AI-curieus naar AI-bekwaam gaat. Werkt in cohorten van 4-6 bedrijven die gezamenlijk starten en eindigen — peer learning, gedeelde sessies, eigen oplossing per bedrijf.
                 </p>
 
-                <ul className="space-y-3">
-                  <FeatureListItem>Diepgaande assessment van transformatie-gereedheid</FeatureListItem>
-                  <FeatureListItem>Meerdaagse intensief met cross-organisationeel leren</FeatureListItem>
-                  <FeatureListItem>90-dagen implementatie met peer support</FeatureListItem>
-                  <FeatureListItem>Interne capaciteitsopbouw & change agents</FeatureListItem>
-                  <FeatureListItem>Focus op businessmodel-innovatie</FeatureListItem>
+                <div className="text-sm font-semibold text-gray-900 mt-4">Inclusief:</div>
+                <ul className="space-y-2">
+                  <FeatureListItem>12 workshops voor je team (online + op locatie)</FeatureListItem>
+                  <FeatureListItem>Werkende AI-oplossing op jouw use case</FeatureListItem>
+                  <FeatureListItem>1-op-1 coaching met directie / projectleider</FeatureListItem>
+                  <FeatureListItem>90-dagen rapport voor je directie of MT</FeatureListItem>
+                  <FeatureListItem>Onderhoudshandleiding voor na het traject</FeatureListItem>
                 </ul>
 
-                <Button onClick={() => openContactModal('track_2')} fullWidth className="mt-8">
-                  Reserveer plek (Track 2)
+                <div
+                  className="rounded-xl p-5 mt-4 border-2"
+                  style={{ backgroundColor: colors.bg.yellow, borderColor: colors.primary }}
+                >
+                  <div className="text-sm font-bold mb-2" style={{ color: '#000' }}>
+                    Founding Cohort · start Q3 2026 · 4 plekken
+                  </div>
+                  <ul className="text-sm text-gray-800 space-y-1">
+                    <li>+ Founding-price €7.500 (van €15.000)</li>
+                    <li>+ Levenslange toegang tot BDS alumni-netwerk</li>
+                    <li>+ Vast aanspreekpunt voor het hele eerste jaar</li>
+                  </ul>
+                </div>
+
+                <Button href="#founding-cohort" fullWidth className="mt-auto">
+                  Meld je team aan
+                </Button>
+              </div>
+            </div>
+
+            {/* Programma 3 — AI Oplossing Sprint */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 flex flex-col" style={{ borderColor: colors.primary }}>
+              <div className="p-8" style={{ backgroundColor: colors.bg.cyan }}>
+                <Target className="w-12 h-12 mb-4" />
+                <h3 className="text-2xl font-bold mb-2">AI Oplossing Sprint</h3>
+                <p className="text-base font-semibold text-gray-700 mb-4">
+                  Zes weken. Jouw data. Een werkende AI.
+                </p>
+                <PricingDisplay price="€12.000" className="mb-1" />
+                <div className="text-sm text-gray-600">vanaf · excl. BTW</div>
+              </div>
+
+              <div className="p-8 space-y-4 flex flex-col flex-1">
+                <p className="text-base text-gray-700">
+                  Voor MKB-ers met een concrete use case en eigen data. In zes weken leveren we een AI-oplossing die je medewerkers daadwerkelijk gebruiken — met de productieklare infrastructuur die we voor Bonnenmonster bouwden (EU-data, AVG, versleutelde verbindingen).
+                </p>
+
+                <div className="text-sm font-semibold text-gray-900 mt-4">Wat je krijgt:</div>
+                <ul className="space-y-2">
+                  <FeatureListItem>Werkende oplossing op jouw data</FeatureListItem>
+                  <FeatureListItem>Productie-architectuur (geen Excel-hack)</FeatureListItem>
+                  <FeatureListItem>Overdrachtsdocumentatie voor je IT-team</FeatureListItem>
+                  <FeatureListItem>30 dagen ondersteuning na livegang</FeatureListItem>
+                </ul>
+
+                <Button onClick={() => openContactModal('solution_sprint')} fullWidth className="mt-auto">
+                  Bespreek je business case
                 </Button>
               </div>
             </div>
           </div>
-          
-          <div className="mt-16 p-8 rounded-xl text-center" style={{ backgroundColor: colors.bg.blue2 }}>
-            <p className="text-lg text-gray-700 mb-4">
-              <strong>Early-bird voordelen:</strong><br />
-              30% korting · On-site intakedag · Lifetime alumni status
-            </p>
-            <p className="text-sm text-gray-600">
-              Eerste 2 workshops krijgen speciale pioneer pricing.<br />
-              Klaar om te bouwen? Laten we transformeren.
+        </div>
+      </section>
+
+      {/* Founding Cohort Landing */}
+      <section id="founding-cohort" aria-label="Founding Cohort details" className="py-20 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: colors.bg.yellow }}>
+        <div className="max-w-4xl mx-auto">
+
+          {/* Header */}
+          <div className="text-center mb-12">
+            <div
+              className="inline-flex items-center gap-2 px-5 py-2 rounded-full mb-6 border-2 shadow-md"
+              style={{ borderColor: colors.primary, backgroundColor: '#ffffff' }}
+            >
+              <span className="text-sm font-bold">4 plekken · start Q3 2026</span>
+            </div>
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+              Founding Cohort
+            </h2>
+            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+              Wees een van de vier MKB-bedrijven die als eerste het 90-Day AI Capability programma doorlopen — tegen founding-price, met exclusieve extra's.
             </p>
           </div>
+
+          {/* Why join */}
+          <div className="bg-white rounded-2xl p-8 shadow-lg mb-8">
+            <h3 className="text-2xl font-bold mb-4">Waarom als eerste meedoen?</h3>
+            <p className="text-gray-700">
+              De Founding Cohort krijgt invloed op hoe dit programma werkt. Jouw vragen, jouw use case, jouw feedback bepalen mede de inhoud van de workshops. In ruil daarvoor krijg je het programma voor de helft van de reguliere prijs, plus exclusieve extra's die alleen voor deze eerste vier bedrijven gelden.
+            </p>
+          </div>
+
+          {/* Extra's + Price */}
+          <div className="bg-white rounded-2xl p-8 shadow-lg mb-8">
+            <div className="mb-6">
+              <PricingDisplay price="€7.500" originalPrice="€15.000" />
+              <div className="text-sm text-gray-600 mt-2">Founding-price · excl. BTW · de helft van de reguliere prijs</div>
+            </div>
+
+            <h3 className="text-xl font-bold mb-4">Wat je extra krijgt als Founding Cohort:</h3>
+            <ul className="space-y-3 mb-6">
+              <FeatureListItem>50% korting (€7.500 in plaats van €15.000)</FeatureListItem>
+              <FeatureListItem>Levenslange toegang tot BDS alumni-netwerk</FeatureListItem>
+              <FeatureListItem>Vast aanspreekpunt voor het hele eerste jaar</FeatureListItem>
+              <FeatureListItem>Meedenken over de programmainhoud — jouw input weegt mee</FeatureListItem>
+            </ul>
+
+            <div className="border-t pt-4 mt-4 text-sm text-gray-600">
+              Bovendien alles uit het reguliere 90-Day programma: 12 workshops, werkende AI-oplossing, 1-op-1 coaching, 90-dagen rapport en onderhoudshandleiding.
+            </div>
+          </div>
+
+          {/* Intake questions */}
+          <div className="bg-white rounded-2xl p-8 shadow-lg mb-8">
+            <h3 className="text-2xl font-bold mb-2">Wat bespreken we in de intake?</h3>
+            <p className="text-sm text-gray-600 mb-6">Gratis, 30 minuten, geen verkoopdruk.</p>
+            <ul className="space-y-3">
+              <FeatureListItem>Wat is je concrete vraag of business case?</FeatureListItem>
+              <FeatureListItem>Hoe ziet je huidige datasituatie eruit?</FeatureListItem>
+              <FeatureListItem>Wie kun je vrijmaken uit je team (3-6 mensen, 4-6 uur per week)?</FeatureListItem>
+              <FeatureListItem>Welke uitkomst wil je over 90 dagen op tafel hebben?</FeatureListItem>
+              <FeatureListItem>Wat is je beslissingsproces en tijdslijn?</FeatureListItem>
+            </ul>
+          </div>
+
+          {/* Process */}
+          <div className="bg-white rounded-2xl p-8 shadow-lg mb-8">
+            <h3 className="text-2xl font-bold mb-6">Hoe gaat het verder?</h3>
+            <div className="space-y-5">
+              <div className="flex gap-4">
+                <div
+                  className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg"
+                  style={{ backgroundColor: colors.primary, color: '#000' }}
+                >
+                  1
+                </div>
+                <div>
+                  <div className="font-bold text-lg">Plan een intake (gratis)</div>
+                  <div className="text-gray-700">30 minuten. We bespreken je situatie en de vragen hierboven. Eerlijk: niet elke case is geschikt voor AI.</div>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div
+                  className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg"
+                  style={{ backgroundColor: colors.primary, color: '#000' }}
+                >
+                  2
+                </div>
+                <div>
+                  <div className="font-bold text-lg">Match-check (binnen 3 dagen)</div>
+                  <div className="text-gray-700">Ik maak een korte beoordeling van scope, teambeschikbaarheid en business case. Je krijgt een eerlijk ja/nee — geen verkoopdruk.</div>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div
+                  className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg"
+                  style={{ backgroundColor: colors.primary, color: '#000' }}
+                >
+                  3
+                </div>
+                <div>
+                  <div className="font-bold text-lg">Plek reserveren</div>
+                  <div className="text-gray-700">€1.500 aanbetaling reserveert je plek in de Founding Cohort. Volledig terug als we vóór de start alsnog besluiten niet door te gaan.</div>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div
+                  className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg"
+                  style={{ backgroundColor: colors.primary, color: '#000' }}
+                >
+                  4
+                </div>
+                <div>
+                  <div className="font-bold text-lg">Q3 2026 — start</div>
+                  <div className="text-gray-700">90 dagen later: werkende AI-oplossing in je bedrijf, een team dat het begrijpt en kan onderhouden, en levenslange alumni-toegang.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="text-center">
+            <Button onClick={() => openContactModal('founding_cohort')} icon={ArrowRight} size="lg">
+              Plan intake voor Founding Cohort
+            </Button>
+            <p className="text-sm text-gray-600 mt-4">
+              4 plekken · founding-price geldt alleen voor cohort 1
+            </p>
+          </div>
+
         </div>
       </section>
 
@@ -717,8 +859,8 @@ export default function ThinkTenXLanding() {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <img src="/logo.png" alt="THTX Logo" className="w-6 h-6" />
-                <span className="text-xl font-bold">THTX.nl</span>
+                <img src="/logo.png" alt="Business Data Solutions Logo" className="w-6 h-6" />
+                <span className="text-xl font-bold">Business Data Solutions</span>
               </div>
               <p className="text-gray-400">
                 De AI Solutions Architect Beweging<br />
@@ -750,7 +892,7 @@ export default function ThinkTenXLanding() {
           </div>
           
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 THTX.nl - Voor leiders die transformeren, niet optimaliseren.</p>
+            <p>&copy; 2025 Business Data Solutions - Voor leiders die transformeren, niet optimaliseren.</p>
           </div>
         </div>
       </footer>
