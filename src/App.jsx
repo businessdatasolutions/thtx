@@ -3,7 +3,6 @@ import { ArrowRight, Users, Target, CheckCircle, XCircle, Menu, X, FileText, Mes
 import { Badge, Button, Card, SectionHeader, FeatureListItem, PricingDisplay, StepIndicator } from './components/shared';
 import { NewsletterModal } from './components/NewsletterModal';
 import { UnsubscribeModal } from './components/UnsubscribeModal';
-import { DoubleLoopDiagram } from './components/DoubleLoopDiagram';
 import { colors } from './styles/design-tokens';
 
 export default function ThinkTenXLanding() {
@@ -164,176 +163,117 @@ export default function ThinkTenXLanding() {
         </div>
       </section>
 
-      {/* Case Study Section */}
-      <section id="example" aria-label="Case study voorbeeld" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      {/* Recent Cases */}
+      <section id="example" aria-label="Recente cases" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <SectionHeader
-            badge="De AI Solutions Architect Aanpak"
-            title="Van probleem naar werkende oplossing in 90 dagen"
-            subtitle="Een voorbeeld: Document search AI voor een machinebouwer"
+            title="Recent werk"
+            subtitle="Twee AI-systemen in productie — gebouwd op productieklare infrastructuur, met EU-data en AVG-conformiteit."
           />
 
-          {/* Three-column layout: Problem → Solution → Impact */}
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {/* Problem */}
-            <Card
-              theme="problem"
-              icon={AlertCircle}
-              subtitle="Het Probleem"
-              title="2 uur zoeken in PDFs"
-              footer="€11.250/maand verloren tijd"
-            >
-              <ul className="space-y-2 text-sm text-gray-700">
-                <li>• Sales teams verliezen 30-120 min per dag</li>
-                <li>• Technische specificaties verspreid</li>
-                <li>• Alleen seniors vinden snel info</li>
-                <li>• Klanten wachten op antwoorden</li>
-              </ul>
-            </Card>
+          <div className="grid md:grid-cols-2 gap-8 mt-12">
 
-            {/* Solution */}
-            <Card
-              theme="solution"
-              icon={Lightbulb}
-              subtitle="De Oplossing"
-              title="AI Document Search"
-              footer="115/115 tests passing"
-            >
-              <ul className="space-y-2 text-sm text-gray-700">
-                <li>• Elasticsearch (BM25) voor snelheid</li>
-                <li>• Claude Haiku voor samenvatting</li>
-                <li>• Vision AI voor tekst extractie</li>
-                <li>• User feedback voor ranking</li>
-              </ul>
-            </Card>
-
-            {/* Impact */}
-            <Card
-              theme="impact"
-              icon={TrendingUp}
-              subtitle="De Impact"
-              title="3 minuten vinden"
-              footer="5 agents × 2.25 uur/dag terug"
-            >
-              <ul className="space-y-2 text-sm text-gray-700">
-                <li>• <strong>90%+</strong> tijd besparing</li>
-                <li>• <strong>50ms</strong> response tijd (p95 &lt;100ms)</li>
-                <li>• <strong>€75/maand</strong> operationele kosten</li>
-                <li>• <strong>150x ROI</strong> in eerste maand</li>
-              </ul>
-            </Card>
-          </div>
-
-          {/* Timeline: Double-loop learning */}
-          <div className="bg-gray-50 p-6 rounded-xl mb-8">
-            <h4 className="font-semibold mb-4 text-center">Van idee naar werkend systeem naar AI-capabilities</h4>
-            <DoubleLoopDiagram />
-          </div>
-
-          {/* CTA */}
-          <div className="text-center">
-            <p className="text-gray-600 mb-4">
-              Zo werken <strong>AI Solutions Architects</strong>:<br />
-              Niet adviseren en vertrekken. Maar bouwen en borgen.
-            </p>
-            <p className="text-sm text-gray-500 mb-6">
-              Wat zou <strong>jouw</strong> organisatie kunnen bouwen met deze aanpak?
-            </p>
-            <Button href="#possibilities" icon={ArrowRight}>
-              Ontdek meer mogelijkheden
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* What You Can Build Section */}
-      <section id="possibilities" className="py-20 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: colors.bg.blue1 }}>
-        <div className="max-w-7xl mx-auto">
-          <SectionHeader
-            title="Wat je kan bouwen in 90 dagen"
-            subtitle={
-              <>
-                Cross-industry voorbeelden van AI-oplossingen die IT goedkeurt<br />
-                en business transformeert
-              </>
-            }
-          />
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {/* Card 1: Real example */}
-            <Card
-              icon={FileText}
-              badge={<Badge variant="filled">✓ GEBOUWD</Badge>}
-              title="Document Search AI"
-              className="shadow-lg"
-            >
-              <p className="text-sm text-gray-600 mb-3">
-                Manufacturing · Packaging machinery
-              </p>
-              <div className="text-lg font-semibold mb-4" style={{ color: colors.primary }}>
-                90%+ tijd besparing
+            {/* Case 1 — Bonnenmonster */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 flex flex-col" style={{ borderColor: colors.primary }}>
+              <div className="p-8" style={{ backgroundColor: colors.bg.blue1 }}>
+                <div className="flex items-center justify-between mb-4">
+                  <span
+                    className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold"
+                    style={{ backgroundColor: colors.primary, color: '#000' }}
+                  >
+                    ✓ Live
+                  </span>
+                  <span className="text-xs text-gray-600">Productie-AI · ZZP/MKB</span>
+                </div>
+                <h3 className="text-2xl font-bold mb-1">Bonnenmonster</h3>
+                <p className="text-base text-gray-700">Productieklare AI voor ZZP'ers</p>
               </div>
-              <p className="text-sm text-gray-700 mb-4">
-                Van 2 uur zoeken in technische PDFs naar 3 minuten met AI-samenvatting en semantic search. Volgende stap: koppeling aan AI-assistent.
-              </p>
-              <div className="text-xs text-gray-500 pt-3 border-t">
-                Experiment voor een machinebouwer<br />
-                12 weken · €11.250/maand impact
-              </div>
-            </Card>
 
-            {/* Card 2: ISO Audit case */}
-            <Card
-              icon={CheckCircle}
-              badge={<Badge variant="filled">✓ GEBOUWD</Badge>}
-              title="ISO Audit Assistant"
-              className="shadow-lg"
-            >
-              <p className="text-sm text-gray-600 mb-3">
-                Services · Klantcontact
-              </p>
-              <div className="text-lg font-semibold mb-4" style={{ color: colors.primary }}>
-                90 dagen naar certificering
-              </div>
-              <p className="text-sm text-gray-700 mb-4">
-                AI gedreven tool met geautomatiseerd ISO kwaliteitssysteem.
-                Genereert automatisch procesbewijs tijdens gebruik én levert dit aan tijdens audits.
-              </p>
-              <div className="text-xs text-gray-500 pt-3 border-t">
-                90% minder audit-voorbereiding · intern én extern
-              </div>
-            </Card>
+              <div className="p-8 space-y-4 flex flex-col flex-1">
+                <div>
+                  <div className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-1">Probleem</div>
+                  <p className="text-base text-gray-700">
+                    ZZP'ers en MKB-eigenaren raken bonnetjes kwijt en steken uren in handmatige BTW-administratie.
+                  </p>
+                </div>
 
-            {/* Card 3: Potential use case */}
-            <Card
-              icon={TrendingUp}
-              badge={<Badge variant="filled">✦ IDEATION</Badge>}
-              title="Zorgfinance AI Agent"
-              className="shadow-lg"
-            >
-              <p className="text-sm text-gray-600 mb-3">
-                Finance · Zorg
-              </p>
-              <div className="text-lg font-semibold mb-4" style={{ color: colors.primary }}>
-                Van uitzoeken naar vooruitkijken
-              </div>
-              <p className="text-sm text-gray-700 mb-4">
-                Zvw, Wlz, Wmo-stromen dagelijks geconsolideerd. AI signaleert afwijkingen en genereert boekingsvoorstellen. Jouw team keurt goed en houdt tijd over voor strategische beslissingen.
-              </p>
-              <div className="text-xs text-gray-500 pt-3 border-t">
-                6 weken vooruit kijken · Rust in de financiële planning
-              </div>
-            </Card>
-          </div>
+                <div>
+                  <div className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-1">Oplossing</div>
+                  <p className="text-base text-gray-700">
+                    Een mobiele AI-scanner met BTW-logica voor NL, DE, BE en FR, automatische categorisatie en CSV/PDF-export.
+                  </p>
+                </div>
 
-          <div className="text-center mt-12">
-            <p className="text-sm text-gray-600 mb-6">
-              Deze voorbeelden tonen de <strong>diversiteit</strong> van wat mogelijk is.<br />
-              In workshops werk je aan <strong>jouw</strong> specifieke uitdaging.
-            </p>
-            <Button href="#quiz" size="lg" icon={ArrowRight}>
-              Ben je klaar om te bouwen?
-            </Button>
+                <div>
+                  <div className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-1">Resultaat</div>
+                  <p className="text-base text-gray-700">
+                    Live in de Google Play Store sinds mei 2026.
+                  </p>
+                </div>
+
+                <div className="text-xs text-gray-500 pt-3 border-t">
+                  Flutter · GCP Vertex AI · OCR + LLM · EU-data (België) · AVG-conform
+                </div>
+
+                <Button
+                  href="https://play.google.com/store/apps/details?id=com.bds.bonmon"
+                  icon={ArrowRight}
+                  fullWidth
+                  className="mt-auto"
+                >
+                  Bekijk in Play Store
+                </Button>
+              </div>
+            </div>
+
+            {/* Case 2 — ISO Audit Assistant */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 flex flex-col" style={{ borderColor: colors.primary }}>
+              <div className="p-8" style={{ backgroundColor: colors.bg.cyan }}>
+                <div className="flex items-center justify-between mb-4">
+                  <span
+                    className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold"
+                    style={{ backgroundColor: colors.primary, color: '#000' }}
+                  >
+                    ✓ Live
+                  </span>
+                  <span className="text-xs text-gray-600">Services · Klantcontact</span>
+                </div>
+                <h3 className="text-2xl font-bold mb-1">ISO Audit Assistant</h3>
+                <p className="text-base text-gray-700">AI-gedreven kwaliteitssysteem</p>
+              </div>
+
+              <div className="p-8 space-y-4 flex flex-col flex-1">
+                <div>
+                  <div className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-1">Probleem</div>
+                  <p className="text-base text-gray-700">
+                    Audit-voorbereiding kostte intern én extern weken werk per certificering.
+                  </p>
+                </div>
+
+                <div>
+                  <div className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-1">Oplossing</div>
+                  <p className="text-base text-gray-700">
+                    Een AI-gedreven systeem dat automatisch procesbewijs verzamelt tijdens dagelijks gebruik en dit aanlevert tijdens audits.
+                  </p>
+                </div>
+
+                <div>
+                  <div className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-1">Resultaat</div>
+                  <p className="text-base text-gray-700">
+                    90% minder audit-voorbereiding · 90 dagen naar certificering.
+                  </p>
+                </div>
+
+                <Button
+                  onClick={() => openContactModal('iso_audit')}
+                  fullWidth
+                  className="mt-auto"
+                >
+                  Vraag meer info
+                </Button>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
